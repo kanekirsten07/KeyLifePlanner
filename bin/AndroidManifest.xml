@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.TeamKeyLimePie.KeyLifePlanner.CalendarActivity"
+            android:label="@string/title_activity_calendar" >
+        </activity>
+        <activity
+            android:name="com.TeamKeyLimePie.KeyLifePlanner.CalendarView"
+            android:label="@string/title_activity_calendar_view" >
+        </activity>
     </application>
 
 </manifest>

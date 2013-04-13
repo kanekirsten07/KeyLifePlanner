@@ -6,30 +6,20 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".KeyLifePlanner_Main" >
+    tools:context=".CalendarView" >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome" />
+        android:text="@string/calendar" />
     
     <Button
-         android:id="@+id/calendarActivity"
+        android:text="@string/AddButtonLabel"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
-        android:text="@string/CalendarButtonLabel"
-         />
+        />
 
-     <Button
-         android:id="@+id/viewAvatar"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:text="@string/AvatarButtonLabel"
-         />
 </RelativeLayout>

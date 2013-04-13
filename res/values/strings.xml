@@ -4,5 +4,11 @@
     <string name="app_name">KeyLifePlanner</string>
     <string name="action_settings">Settings</string>
     <string name="welcome">Welcome to Key Life Planner</string>
-
+    <string name="title_activity_calendar">CalendarActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_calendar_view">CalendarView</string>
+    <string name="calendar"> This is the Calendar View</string>
+    <string name="CalendarButtonLabel"> View Calendar</string>
+	<string name="AvatarButtonLabel"> View Avatar</string>
+	<string name="AddButtonLabel"> +      Add Task</string>
 </resources>
