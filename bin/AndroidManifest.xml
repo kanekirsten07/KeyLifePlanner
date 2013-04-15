@@ -30,6 +30,10 @@
             android:name="com.TeamKeyLimePie.KeyLifePlanner.CalendarView"
             android:label="@string/title_activity_calendar_view" >
         </activity>
+        <activity
+            android:name="com.TeamKeyLimePie.KeyLifePlanner.AvatarActivity"
+            android:label="@string/title_activity_avatar" >
+        </activity>
     </application>
 
 </manifest>
