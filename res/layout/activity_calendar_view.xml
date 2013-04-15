@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/CalendarButtonColor"
@@ -8,94 +9,31 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".CalendarView" >
-    
+    <Spinner
+        android:id="@+id/task_type_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/addtask"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/AddTaskButtonColor"
+        android:text="@string/AddButtonLabel" />
+
     <EditText
         android:id="@+id/taskname"
-        android:layout_width="100dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="66dp"
-        android:layout_marginLeft="20dp"
-        android:background="@color/TextFieldColor"
+        android:layout_alignLeft="@+id/task_type_spinner"
+        android:layout_below="@+id/task_type_spinner"
+        android:layout_marginTop="78dp"
         android:ems="10"
         android:imeOptions="actionDone"
-        android:inputType="text" />
-    <Spinner
-         android:id="@+id/task_spinner"
-         android:layout_width="100dp"
-         android:layout_height="wrap_content"
-         android:layout_marginLeft="20dp"
-         android:layout_below="@+id/taskname"
-         
-         android:entries="@array/task_types" />
+        android:inputType="text" >
 
-    <Button
-        android:id="@+id/sunday"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
-        
-        android:layout_alignParentTop="true"
-        android:background="@color/AddTaskButtonColor"
-        android:text="@string/SundayLabel" />
-
-    <Button
-        android:id="@+id/wednesday"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
-        
-        android:layout_toRightOf="@+id/tuesday"
-        android:background="@color/AddTaskButtonColor"
-        android:text="@string/WednesdayLabel" />
-
-    <Button
-        android:id="@+id/tuesday"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
-        android:layout_toRightOf="@+id/monday"
-        android:background="@color/AddTaskButtonColor"
-        android:text="@string/TuesdayLabel" />
-
-    <Button
-        android:id="@+id/monday"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
-        
-        android:layout_toRightOf="@+id/sunday"
-        android:background="@color/AddTaskButtonColor"
-        android:text="@string/MondayLabel" />
-
-    <Button
-        android:id="@+id/thursday"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
-        
-        android:layout_toRightOf="@+id/wednesday"
-        android:background="@color/AddTaskButtonColor"
-        android:text="@string/ThursdayLabel" />
-     <Button
-        android:id="@+id/friday"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
-        
-        android:layout_toRightOf="@+id/thursday"
-        android:background="@color/AddTaskButtonColor"
-        android:text="@string/FridayLabel" />
-     <Button
-        android:id="@+id/saturday"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
-        
-        android:layout_toRightOf="@+id/friday"
-        android:background="@color/AddTaskButtonColor"
-        android:text="@string/SaturdayLabel" />
-
-     <Button
-         android:id="@+id/addtask"
-         android:layout_width="60dp"
-         android:layout_height="60dp"
-         android:layout_alignRight="@+id/saturday"
-         android:layout_below="@+id/friday"
-         android:layout_marginTop="20dp"
-         android:background="@color/AddTaskButtonColor"
-         android:text="@string/AddButtonLabel" />
-
+        <requestFocus />
+    </EditText>
+  
 </RelativeLayout>

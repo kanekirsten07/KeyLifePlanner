@@ -8,6 +8,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".CalendarActivity" >
 
+     <com.samuraichikx.keylifeplanner.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"/>
     
     
-    </RelativeLayout>
+    
+    
+
+</RelativeLayout>

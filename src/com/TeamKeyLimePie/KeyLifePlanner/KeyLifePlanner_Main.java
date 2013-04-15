@@ -28,7 +28,7 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 		background.start();
 		
 		Button viewCalendar = (Button)findViewById(R.id.calendarActivity);
-		Button viewAvatar = (Button)findViewById(R.id.avatarActivity);
+		Button viewAvatar = (Button)findViewById(R.id.viewAvatar);
 		Button viewAchievements = (Button)findViewById(R.id.viewAchievements);
 		
 		viewCalendar.setOnClickListener(this);
@@ -72,7 +72,7 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
     		
     		startActivity(i);
     		break;
-    	case R.id.avatarActivity:
+    	case R.id.viewAvatar:
     		i = new Intent (this, AvatarActivity.class);
     		
     		startActivity(i);
