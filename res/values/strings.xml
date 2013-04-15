@@ -8,7 +8,13 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_calendar_view">CalendarView</string>
     <string name="calendar"> This is the Calendar View</string>
-    <string name="CalendarButtonLabel"> View Calendar</string>
-	<string name="AvatarButtonLabel"> View Avatar</string>
+    <string name="CalendarButtonLabel">CALENDAR</string>
+	<string name="AvatarButtonLabel">CUSTOMIZE AVATAR</string>
 	<string name="AddButtonLabel"> +      Add Task</string>
+	<string name="AchievementsButtonLabel">ACHIEVEMENTS</string>
+	<color name="BackgroundColor">#C7F0C0</color>
+	<color name="CalendarButtonColor">#00CC00</color>
+	<color name="AchievementsButtonColor">#FFFF00</color>
+	<color name="AvatarButtonColor">#0066FF</color>
+	<color name="AddTaskButtonColor">#B8B8B8</color>
 </resources>

@@ -3,6 +3,7 @@ package com.TeamKeyLimePie.KeyLifePlanner;
 
 
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -13,15 +14,44 @@ import android.widget.Button;
 
 public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 
+	//initializes background music
+	MediaPlayer background;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_key_life_planner__main);
+		
+		//starts background music
+		background = MediaPlayer.create(KeyLifePlanner_Main.this, R.raw.beginnings);
+		background.setLooping(true);
+		background.start();
+		
 		Button viewCalendar = (Button)findViewById(R.id.calendarActivity);
 		Button viewAvatar = (Button)findViewById(R.id.viewAvatar);
+		Button viewAchievements = (Button)findViewById(R.id.viewAchievements);
 		
 		viewCalendar.setOnClickListener(this);
 	}
+	
+	
+	//unsure about this part...
+	/*
+	@Override
+	protected void onPause()
+	{
+		super.onPause();
+		background.stop();
+		finish();
+	}
+	
+	@Override
+	protected void onResume()
+	{
+		super.onResume();
+		background.start();
+	}
+	*/
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -43,6 +73,11 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
     		startActivity(i);
     		break;
     		/*
+    	case R.id.viewAchievements:
+    		i = new Intent(this, AchievementsActivity.class);
+    		startActivity(i);
+    		break;
+    		
     	case R.id.viewAvatar:
     		i = new Intent(this, OptionsActivity.class);
     		startActivity(i);
