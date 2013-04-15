@@ -28,7 +28,7 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 		background.start();
 		
 		Button viewCalendar = (Button)findViewById(R.id.calendarActivity);
-		Button viewAvatar = (Button)findViewById(R.id.viewAvatar);
+		Button viewAvatar = (Button)findViewById(R.id.avatarActivity);
 		Button viewAchievements = (Button)findViewById(R.id.viewAchievements);
 		
 		viewCalendar.setOnClickListener(this);
@@ -52,14 +52,14 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 		background.start();
 	}
 	*/
-
+/*
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.key_life_planner__main, menu);
 		return true;
 	}
-
+*/
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
@@ -72,17 +72,12 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
     		
     		startActivity(i);
     		break;
-    		/*
-    	case R.id.viewAchievements:
-    		i = new Intent(this, AchievementsActivity.class);
-    		startActivity(i);
-    		break;
+    	case R.id.avatarActivity:
+    		i = new Intent (this, AvatarActivity.class);
     		
-    	case R.id.viewAvatar:
-    		i = new Intent(this, OptionsActivity.class);
     		startActivity(i);
     		break;
-    		*/
+    	
     	
     	}
 		

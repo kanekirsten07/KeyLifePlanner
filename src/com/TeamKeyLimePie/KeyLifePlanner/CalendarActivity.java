@@ -6,9 +6,16 @@ import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 
-public class CalendarActivity extends Activity {
+public class CalendarActivity extends Activity implements OnClickListener{
 
 	private CalendarView _calendarview;
 	private ArrayList<Task> Sunday;
@@ -21,16 +28,30 @@ public class CalendarActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_calendar);
-		_calendarview = (CalendarView)findViewById(R.id.calendarView); 
-        _calendarview.setController(this);
+		setContentView(R.layout.activity_calendar_view);
+		
+Button addTask = (Button)findViewById(R.id.addtask);
+		
+		addTask.setOnClickListener(this);
+       
+     
+	}
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+Intent i;
+    	
+    	switch (v.getId()){
+    	case R.id.addtask:
+    		Log.d("click", "Add Task was clicked");
+    		//i = new Intent (this, CalendarActivity.class);
+    		
+    		//startActivity(i);
+    		break;
+		
+    	}
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.calendar, menu);
-		return true;
-	}
+	
 
 }

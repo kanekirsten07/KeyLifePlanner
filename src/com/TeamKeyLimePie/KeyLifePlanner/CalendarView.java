@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
@@ -21,9 +23,10 @@ public class CalendarView extends View implements OnTouchListener {
 		// TODO Auto-generated constructor stub
 		
 		// TODO Auto-generated constructor stub
-		
+        LayoutInflater.from(context).inflate(R.layout.activity_calendar_view, null);
 		 
 		initCalendarView();
+		cal.setContentView(R.layout.activity_calendar_view);
 	}
 
 	
@@ -34,15 +37,20 @@ public class CalendarView extends View implements OnTouchListener {
 
 
 
-	@Override
-	public boolean onTouch(View arg0, MotionEvent arg1) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 	
 	public void setController(CalendarActivity calendar)
     {
     	this.cal=calendar;
     }
+
+
+
+	@Override
+	public boolean onTouch(View v, MotionEvent event) {
+		int s = v.getId();
+		Log.d("Click", Integer.toString(s));
+		return true;
+    	
+	}
 }
