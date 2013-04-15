@@ -15,10 +15,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.inputmethod.EditorInfo;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 
 public class CalendarActivity extends Activity implements OnClickListener{
 
@@ -39,14 +42,25 @@ public class CalendarActivity extends Activity implements OnClickListener{
 		Button addTask = (Button)findViewById(R.id.addtask);
 		
 		addTask.setOnClickListener(this);
-       taskedit = (EditText)findViewById(R.id.taskname);
-    
-       taskedit.setOnFocusChangeListener(new OnFocusChangeListener() {
-    	   public void onFocusChange(View v, boolean hasFocus){
-    		   String strvalue = taskedit.getText().toString();
-    		   Log.d("EditText value:", strvalue);
-    	   }
+       /*taskedit = (EditText)findViewById(R.id.taskname);
+       
+       taskedit.setOnEditorActionListener(new OnEditorActionListener() {
+    	   
+
+		@Override
+		public boolean onEditorAction(TextView v, int actionId, KeyEvent arg2) {
+			if(actionId == EditorInfo.IME_ACTION_DONE){
+				String strvalue = taskedit.getText().toString();
+	    		   Log.d("EditText value:", strvalue);
+	    		   Log.d("Done", "pressed");
+	    		   return true;
+			}else
+			{
+				return false;
+			}
+		}
        });
+       */
 	}
 	
 	

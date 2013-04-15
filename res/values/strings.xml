@@ -11,6 +11,13 @@
     <string name="CalendarButtonLabel">CALENDAR</string>
     <string name="AvatarButtonLabel">CUSTOMIZE AVATAR</string>
     <string name="AddButtonLabel"> +      Add Task</string>
+    <string name="SundayLabel">Sun</string>
+    <string name="MondayLabel">Mon</string>
+    <string name="TuesdayLabel">Tue</string>
+    <string name="WednesdayLabel">Wed</string>
+    <string name="ThursdayLabel">Thur</string>
+    <string name="FridayLabel">Fri</string>
+    <string name="SaturdayLabel">Sat</string>
     <string name="AchievementsButtonLabel">ACHIEVEMENTS</string>
 	<string name="Avatar"> This is the avatar view</string>
 	<string-array name="task_types">
@@ -19,6 +26,7 @@
 	    <item>Travel</item>
 	    <item>Custom</item>
 	</string-array>
+	<color name="TextFieldColor">#FFFFFF</color>
     <color name="BackgroundColor">#C7F0C0</color>
     <color name="CalendarButtonColor">#00CC00</color>
     <color name="AchievementsButtonColor">#FFFF00</color>
