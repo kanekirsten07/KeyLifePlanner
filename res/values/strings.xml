@@ -13,6 +13,12 @@
     <string name="AddButtonLabel"> +      Add Task</string>
     <string name="AchievementsButtonLabel">ACHIEVEMENTS</string>
 	<string name="Avatar"> This is the avatar view</string>
+	<string-array name="task_types">
+	    <item>School</item>
+	    <item>Hygiene</item>
+	    <item>Travel</item>
+	    <item>Custom</item>
+	</string-array>
     <color name="BackgroundColor">#C7F0C0</color>
     <color name="CalendarButtonColor">#00CC00</color>
     <color name="AchievementsButtonColor">#FFFF00</color>

@@ -9,7 +9,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".CalendarView" >
-
+    <Spinner
+        android:id="@+id/task_type_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
     <Button
         android:id="@+id/addtask"
         android:layout_width="match_parent"
@@ -19,13 +22,18 @@
         android:background="@color/AddTaskButtonColor"
         android:text="@string/AddButtonLabel" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/taskname"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="94dp"
-        android:text="@string/calendar" />
+        android:layout_alignLeft="@+id/task_type_spinner"
+        android:layout_below="@+id/task_type_spinner"
+        android:layout_marginTop="78dp"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="text" >
 
+        <requestFocus />
+    </EditText>
+  
 </RelativeLayout>
