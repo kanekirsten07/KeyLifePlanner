@@ -19,7 +19,7 @@ public final class R {
         public static final int AvatarButtonColor=0x7f080004;
         public static final int CalendarBackgroundColor=0x7f080002;
         public static final int KeyLimeBackgroundColor=0x7f080001;
-        public static final int TextFieldColor=0x7f080000;
+        public static final int white=0x7f080000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
