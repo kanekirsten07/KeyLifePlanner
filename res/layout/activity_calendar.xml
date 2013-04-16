@@ -2,19 +2,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".CalendarActivity" >
+    android:background="@color/CalendarBackgroundColor"
+    android:orientation="vertical"
+    tools:context=".CalendarView" >
+    
+    
+        
+    <Button
+        android:id="@+id/sunday"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+       
+        android:background="@drawable/activeday"
+        android:text="@string/SundayLabel"
+        android:textSize="16sp" />
+    <Button
+        android:id="@+id/monday"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="45dp"
+        android:background="@drawable/inactiveday"
+        android:text="@string/MondayLabel"
+        android:textSize="16sp"
+        android:textColor="@color/white"  />
 
-     <com.samuraichikx.keylifeplanner.CalendarView
-        android:id="@+id/calendarView"
+    <Button
+        android:id="@+id/tuesday"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:background="@drawable/inactiveday"
+        android:layout_marginLeft="90dp"
+        android:text="@string/TuesdayLabel"
+        android:textSize="16sp"
+        android:textColor="@color/white"  />
+    
+    <Button
+        android:id="@+id/wednesday"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="135dp"
+        android:background="@drawable/inactiveday"
+        android:text="@string/WednesdayLabel"
+        android:textSize="16sp"
+        android:textColor="@color/white"  />
+
+    <Button
+        android:id="@+id/thursday"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="180dp"
+        android:background="@drawable/inactiveday"
+        android:text="@string/ThursdayLabel" 
+        android:textSize="16sp"
+        android:textColor="@color/white" />
+     <Button
+        android:id="@+id/friday"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:background="@drawable/inactiveday"
+        android:layout_marginLeft="225dp"
+        android:text="@string/FridayLabel"
+        android:textSize="16sp" 
+        android:textColor="@color/white" />
+     <Button
+        android:id="@+id/saturday"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="270dp"
+        android:background="@drawable/inactiveday"
+        android:text="@string/SaturdayLabel"
+        android:textSize="16sp" 
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/addtask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/saturday"
+        android:layout_below="@+id/friday"
+        android:layout_marginTop="28dp"
+        android:background="@color/AddTaskButtonColor"
+        android:text="@string/AddButtonLabel" />
+    
+    <ListView 
+        android:id="@+id/task_list"
+        android:layout_below="@+id/addtask"
         android:layout_width="fill_parent"
-    	android:layout_height="fill_parent"/>
-    
-    
-    
-    
+        android:layout_height="wrap_content"
+        
+    />
 
 </RelativeLayout>

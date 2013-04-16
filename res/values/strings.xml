@@ -9,7 +9,7 @@
     <string name="calendar"> This is the Calendar View</string>
     <string name="CalendarButtonLabel">CALENDAR</string>
     <string name="AvatarButtonLabel">CUSTOMIZE AVATAR</string>
-    <string name="AddButtonLabel"> +      Add Task</string>
+    <string name="AddButtonLabel"> + Add</string>
     <string name="SundayLabel">SUN</string>
     <string name="MondayLabel">MON</string>
     <string name="TuesdayLabel">TUE</string>

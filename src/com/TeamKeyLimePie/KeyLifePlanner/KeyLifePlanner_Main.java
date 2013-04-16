@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 
@@ -32,6 +33,7 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 		Button viewAchievements = (Button)findViewById(R.id.viewAchievements);
 		
 		viewCalendar.setOnClickListener(this);
+		
 	}
 	
 	
