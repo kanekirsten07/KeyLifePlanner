@@ -15,7 +15,7 @@ import android.widget.Button;
 public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 
 	//initializes background music
-	MediaPlayer background;
+	MediaPlayer backgroundMain;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +23,9 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_key_life_planner__main);
 		
 		//starts background music
-		background = MediaPlayer.create(KeyLifePlanner_Main.this, R.raw.beginnings);
-		background.setLooping(true);
-		background.start();
+		backgroundMain = MediaPlayer.create(KeyLifePlanner_Main.this, R.raw.beginnings);
+		backgroundMain.setLooping(true);
+		backgroundMain.start();
 		
 		Button viewCalendar = (Button)findViewById(R.id.calendarActivity);
 		Button viewAvatar = (Button)findViewById(R.id.viewAvatar);
@@ -40,15 +40,14 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 	protected void onPause()
 	{
 		super.onPause();
-		background.stop();
-		finish();
+		backgroundMain.stop();
 	}
 	
 	@Override
 	protected void onResume()
 	{
 		super.onResume();
-		background.start();
+		backgroundMain.start();
 	}
 	
 /*

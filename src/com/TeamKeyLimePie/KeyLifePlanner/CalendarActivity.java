@@ -4,6 +4,7 @@ package com.TeamKeyLimePie.KeyLifePlanner;
 
 import java.util.ArrayList;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -34,10 +35,16 @@ public class CalendarActivity extends Activity implements OnClickListener{
 	private ArrayList<Task> Friday;
 	private ArrayList<Task> Saturday;
 	EditText taskedit;
+	MediaPlayer backgroundCalendar;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_calendar_view);
+		
+		backgroundCalendar = MediaPlayer.create(CalendarActivity.this, R.raw.neogardens);
+		backgroundCalendar.setLooping(true);
+		backgroundCalendar.start();
 		
 		Button addTask = (Button)findViewById(R.id.addtask);
 		
@@ -63,11 +70,19 @@ public class CalendarActivity extends Activity implements OnClickListener{
        */
 	}
 	
+	@Override
+	protected void onPause()
+	{
+		super.onPause();
+		backgroundCalendar.stop();
+	}
 	
-	
-	
-	
-	
+	@Override
+	protected void onResume()
+	{
+		super.onResume();
+		backgroundCalendar.start();
+	}
 	
 	
 	@Override

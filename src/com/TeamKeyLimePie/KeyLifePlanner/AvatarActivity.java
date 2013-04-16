@@ -1,15 +1,36 @@
 package com.TeamKeyLimePie.KeyLifePlanner;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
 public class AvatarActivity extends Activity {
 
+	MediaPlayer backgroundShop;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_avatar);
+		
+		backgroundShop = MediaPlayer.create(AvatarActivity.this, R.raw.shop);
+		backgroundShop.setLooping(true);
+		backgroundShop.start();
+	}
+	
+	@Override
+	protected void onPause()
+	{
+		super.onPause();
+		backgroundShop.stop();
+	}
+	
+	@Override
+	protected void onResume()
+	{
+		super.onResume();
+		backgroundShop.start();
 	}
 
 	@Override
