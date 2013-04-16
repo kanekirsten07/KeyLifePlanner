@@ -15,7 +15,7 @@
     <Button
         android:id="@+id/sunday"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="25dp"
         android:background="@drawable/activeday"
         android:text="@string/SundayLabel"
         android:textSize="12sp" />
@@ -23,7 +23,7 @@
     <Button
         android:id="@+id/monday"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="25dp"
         android:background="@drawable/inactiveday"
         android:text="@string/MondayLabel"
         android:textSize="12sp" />
@@ -31,7 +31,7 @@
     <Button
         android:id="@+id/tuesday"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="25dp"
         android:background="@drawable/inactiveday"
         android:text="@string/TuesdayLabel"
         android:textSize="12sp" />
@@ -39,7 +39,7 @@
     <Button
         android:id="@+id/wednesday"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="25dp"
         android:background="@drawable/inactiveday"
         android:text="@string/WednesdayLabel"
         android:textSize="12sp" />
@@ -47,21 +47,21 @@
     <Button
         android:id="@+id/thursday"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="25dp"
         android:background="@drawable/inactiveday"
         android:text="@string/ThursdayLabel" 
         android:textSize="12sp"/>
      <Button
         android:id="@+id/friday"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="25dp"
         android:background="@drawable/inactiveday"
         android:text="@string/FridayLabel"
         android:textSize="12sp" />
      <Button
         android:id="@+id/saturday"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="25dp"
         android:background="@drawable/inactiveday"
         android:text="@string/SaturdayLabel"
         android:textSize="12sp" />
