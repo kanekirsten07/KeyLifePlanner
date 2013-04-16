@@ -35,8 +35,7 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 	}
 	
 	
-	//unsure about this part...
-	/*
+	
 	@Override
 	protected void onPause()
 	{
@@ -51,7 +50,7 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 		super.onResume();
 		background.start();
 	}
-	*/
+	
 /*
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
