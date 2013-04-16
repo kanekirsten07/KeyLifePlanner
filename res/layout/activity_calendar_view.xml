@@ -14,7 +14,7 @@
         
     <Button
         android:id="@+id/sunday"
-        android:layout_width="wrap_content"
+        android:layout_width="52dp"
         android:layout_height="25dp"
         android:background="@drawable/activeday"
         android:text="@string/SundayLabel"
@@ -22,7 +22,7 @@
 
     <Button
         android:id="@+id/monday"
-        android:layout_width="wrap_content"
+        android:layout_width="52dp"
         android:layout_height="25dp"
         android:background="@drawable/inactiveday"
         android:text="@string/MondayLabel"
@@ -30,7 +30,7 @@
 
     <Button
         android:id="@+id/tuesday"
-        android:layout_width="wrap_content"
+        android:layout_width="52dp"
         android:layout_height="25dp"
         android:background="@drawable/inactiveday"
         android:text="@string/TuesdayLabel"
@@ -38,7 +38,7 @@
     
     <Button
         android:id="@+id/wednesday"
-        android:layout_width="wrap_content"
+        android:layout_width="52dp"
         android:layout_height="25dp"
         android:background="@drawable/inactiveday"
         android:text="@string/WednesdayLabel"
@@ -46,21 +46,21 @@
 
     <Button
         android:id="@+id/thursday"
-        android:layout_width="wrap_content"
+        android:layout_width="52dp"
         android:layout_height="25dp"
         android:background="@drawable/inactiveday"
         android:text="@string/ThursdayLabel" 
         android:textSize="12sp"/>
      <Button
         android:id="@+id/friday"
-        android:layout_width="wrap_content"
+        android:layout_width="52dp"
         android:layout_height="25dp"
         android:background="@drawable/inactiveday"
         android:text="@string/FridayLabel"
         android:textSize="12sp" />
      <Button
         android:id="@+id/saturday"
-        android:layout_width="wrap_content"
+        android:layout_width="52dp"
         android:layout_height="25dp"
         android:background="@drawable/inactiveday"
         android:text="@string/SaturdayLabel"
