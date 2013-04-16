@@ -66,6 +66,7 @@ public final class R {
         public static final int activity_calendar=0x7f030001;
         public static final int activity_calendar_view=0x7f030002;
         public static final int activity_key_life_planner__main=0x7f030003;
+        public static final int add_task_view=0x7f030004;
     }
     public static final class menu {
         public static final int avatar=0x7f0a0000;
