@@ -26,7 +26,7 @@
     	<item>Travel</item>
     	<item>Custom</item>
 	</string-array>
-	<color name="TextFieldColor">#FFFFFF</color>
+	<color name="white">#FFFFFF</color>
     <color name="KeyLimeBackgroundColor">#C7F0C0</color>
     <color name="CalendarBackgroundColor">#70c656</color>
     <color name="AchievementsButtonColor">#FFFF00</color>
