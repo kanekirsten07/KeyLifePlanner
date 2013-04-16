@@ -8,14 +8,18 @@
 package com.TeamKeyLimePie.KeyLifePlanner;
 
 public final class R {
+    public static final class array {
+        public static final int task_types=0x7f070000;
+    }
     public static final class attr {
     }
     public static final class color {
-        public static final int AchievementsButtonColor=0x7f070002;
-        public static final int AddTaskButtonColor=0x7f070004;
-        public static final int AvatarButtonColor=0x7f070003;
-        public static final int BackgroundColor=0x7f070000;
-        public static final int CalendarButtonColor=0x7f070001;
+        public static final int AchievementsButtonColor=0x7f080003;
+        public static final int AddTaskButtonColor=0x7f080005;
+        public static final int AvatarButtonColor=0x7f080004;
+        public static final int BackgroundColor=0x7f080001;
+        public static final int CalendarButtonColor=0x7f080002;
+        public static final int TextFieldColor=0x7f080000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -38,13 +42,22 @@ public final class R {
         public static final int yellowbutton=0x7f020007;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0006;
-        public static final int button1=0x7f0a0001;
-        public static final int calendarActivity=0x7f0a0003;
-        public static final int calendarView=0x7f0a0000;
-        public static final int textView1=0x7f0a0002;
-        public static final int viewAchievements=0x7f0a0004;
-        public static final int viewAvatar=0x7f0a0005;
+        public static final int action_settings=0x7f0b000f;
+        public static final int addtask=0x7f0b000a;
+        public static final int calendarActivity=0x7f0b000c;
+        public static final int calendarView=0x7f0b0000;
+        public static final int friday=0x7f0b0008;
+        public static final int monday=0x7f0b0006;
+        public static final int saturday=0x7f0b0009;
+        public static final int sunday=0x7f0b0003;
+        public static final int task_spinner=0x7f0b0002;
+        public static final int taskname=0x7f0b0001;
+        public static final int textView1=0x7f0b000b;
+        public static final int thursday=0x7f0b0007;
+        public static final int tuesday=0x7f0b0005;
+        public static final int viewAchievements=0x7f0b000d;
+        public static final int viewAvatar=0x7f0b000e;
+        public static final int wednesday=0x7f0b0004;
     }
     public static final class layout {
         public static final int activity_avatar=0x7f030000;
@@ -53,26 +66,33 @@ public final class R {
         public static final int activity_key_life_planner__main=0x7f030003;
     }
     public static final class menu {
-        public static final int avatar=0x7f090000;
-        public static final int calendar=0x7f090001;
-        public static final int calendar_view=0x7f090002;
-        public static final int key_life_planner__main=0x7f090003;
+        public static final int avatar=0x7f0a0000;
+        public static final int calendar=0x7f0a0001;
+        public static final int calendar_view=0x7f0a0002;
+        public static final int key_life_planner__main=0x7f0a0003;
     }
     public static final class raw {
         public static final int beginnings=0x7f040000;
         public static final int success=0x7f040001;
     }
     public static final class string {
-        public static final int AchievementsButtonLabel=0x7f06000a;
+        public static final int AchievementsButtonLabel=0x7f060011;
         public static final int AddButtonLabel=0x7f060009;
-        public static final int Avatar=0x7f06000b;
+        public static final int Avatar=0x7f060012;
         public static final int AvatarButtonLabel=0x7f060008;
         public static final int CalendarButtonLabel=0x7f060007;
+        public static final int FridayLabel=0x7f06000f;
+        public static final int MondayLabel=0x7f06000b;
+        public static final int SaturdayLabel=0x7f060010;
+        public static final int SundayLabel=0x7f06000a;
+        public static final int ThursdayLabel=0x7f06000e;
+        public static final int TuesdayLabel=0x7f06000c;
+        public static final int WednesdayLabel=0x7f06000d;
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
         public static final int calendar=0x7f060006;
         public static final int hello_world=0x7f060004;
-        public static final int title_activity_avatar=0x7f06000c;
+        public static final int title_activity_avatar=0x7f060013;
         public static final int title_activity_calendar=0x7f060003;
         public static final int title_activity_calendar_view=0x7f060005;
         public static final int welcome=0x7f060002;
@@ -99,11 +119,11 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f080001;
+        public static final int AppBaseTheme=0x7f090001;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f080002;
-        public static final int ButtonText=0x7f080000;
+        public static final int AppTheme=0x7f090002;
+        public static final int ButtonText=0x7f090000;
     }
 }
