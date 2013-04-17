@@ -1,6 +1,7 @@
 package com.TeamKeyLimePie.KeyLifePlanner;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 
 
@@ -29,6 +30,7 @@ public class AddTaskActivity extends Activity implements OnClickListener{
 	private Spinner daydue;
 	private Spinner timedue;
 	private Spinner typeoftask;
+	Random randomvalue = new Random();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -61,7 +63,9 @@ Button submit = (Button)findViewById(R.id.submit);
     		String due = timedue.getSelectedItem().toString();
     		String type= typeoftask.getSelectedItem().toString();
     		String day = daydue.getSelectedItem().toString();
-    		Task t = new Task(desc, due, type, 0);
+    		int value = randomvalue.nextInt(25)+1;
+    		Task t = new Task(desc, due, type, value);
+    		Log.d("value", Integer.toString(value));
     		if(day.equalsIgnoreCase("Sunday"))
     		{
     			Sunday.add(t);
@@ -73,7 +77,7 @@ Button submit = (Button)findViewById(R.id.submit);
     		{
     			Tuesday.add(t);
     			((GlobalApp)getApplication()).setTuesday(Tuesday);
-    			Log.d("Tues", Tuesday.get(0).description);
+    			
     		}else if(day.equalsIgnoreCase("Wednesday"))
     		{
     			Wednesday.add(t);
