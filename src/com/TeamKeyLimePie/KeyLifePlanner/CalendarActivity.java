@@ -13,6 +13,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -54,7 +55,11 @@ public class CalendarActivity extends Activity implements OnClickListener{
 		backgroundCalendar.setLooping(true);
 		backgroundCalendar.start();
 		
-		Button addTask = (Button)findViewById(R.id.addtask);
+		Button addTask = (Button)findViewById(R.id.addtask);		
+		Typeface tf1 = Typeface.createFromAsset(getAssets(),
+		        "fonts/governor.ttf");
+		addTask.setTypeface(tf1);
+		
 		Button sun = (Button)findViewById(R.id.sunday);
 		Button mon = (Button)findViewById(R.id.monday);
 		Button tue = (Button)findViewById(R.id.tuesday);
@@ -62,6 +67,15 @@ public class CalendarActivity extends Activity implements OnClickListener{
 		Button thur = (Button)findViewById(R.id.thursday);
 		Button fri = (Button)findViewById(R.id.friday);
 		Button sat = (Button)findViewById(R.id.saturday);
+		Typeface tf2 = Typeface.createFromAsset(getAssets(),
+		        "fonts/Lorenabold.ttf");
+		sun.setTypeface(tf2);
+		mon.setTypeface(tf2);
+		tue.setTypeface(tf2);
+		wed.setTypeface(tf2);
+		thur.setTypeface(tf2);
+		fri.setTypeface(tf2);
+		sat.setTypeface(tf2);
 		
 		sun.setOnClickListener(this);
 		mon.setOnClickListener(this);
