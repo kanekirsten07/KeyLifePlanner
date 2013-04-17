@@ -47,7 +47,7 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 	protected void onPause()
 	{
 		super.onPause();
-		backgroundMain.stop();
+		backgroundMain.pause();
 	}
 	
 	@Override
