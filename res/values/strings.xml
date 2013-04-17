@@ -6,6 +6,7 @@
     <string name="welcome">Welcome to Key Life Planner</string>
     <string name="title_activity_calendar">CalendarActivity</string>
     <string name="title_activity_calendar_view">CalendarView</string>
+    <string name="title_add_task_view">AddTask</string>
     <string name="calendar"> This is the Calendar View</string>
     <string name="CalendarButtonLabel">CALENDAR</string>
     <string name="AvatarButtonLabel">CUSTOMIZE AVATAR</string>

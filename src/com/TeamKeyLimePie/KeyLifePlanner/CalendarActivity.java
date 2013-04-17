@@ -164,21 +164,20 @@ public class CalendarActivity extends Activity implements OnClickListener{
 		backgroundCalendar.start();
 	}
 	
-	
-	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-Intent i;
+		
+		Intent i;
     	
     	switch (v.getId()){
     	case R.id.addtask:
-    		Log.d("click", "Add Task was clicked");
-    		//i = new Intent (this, CalendarActivity.class);
+    		i = new Intent (this, AddTaskActivity.class);
     		
-    		//startActivity(i);
-    		break;
-		
+    		startActivity(i);
+    		break;	
+    	
     	}
+		
 	}
 
 	
