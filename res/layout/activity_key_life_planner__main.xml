@@ -22,7 +22,7 @@
         android:layout_height="60dp"
         android:background="@drawable/greenbutton" style="@style/ButtonText"
         android:text="@string/CalendarButtonLabel"
-        android:drawableRight="@drawable/calendar2" 
+        android:drawableRight="@drawable/calendar" 
         android:paddingRight="40dp"
         android:drawablePadding="-40dp"/>
     
