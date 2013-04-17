@@ -3,6 +3,8 @@ package com.TeamKeyLimePie.KeyLifePlanner;
 
 
 
+import java.util.ArrayList;
+
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
@@ -33,7 +35,12 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 		Button viewAchievements = (Button)findViewById(R.id.viewAchievements);
 		
 		viewCalendar.setOnClickListener(this);
-		
+		ArrayList<Task> Sunday = new ArrayList<Task>();
+		Task t = new Task("do hw", "10");
+		Task t1 = new Task("brush teeth", "6");
+		Sunday.add(t);
+		Sunday.add(t1);
+		((GlobalApp)getApplication()).setSunday(Sunday);
 	}
 	
 	

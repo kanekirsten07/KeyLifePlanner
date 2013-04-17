@@ -2,12 +2,12 @@ package com.TeamKeyLimePie.KeyLifePlanner;
 
 public class Task {
 
-	public String desc;
-	public String time;
+	public String description;
+	public String timedue;
 	public Task(String description, String timedue)
 	{
-		this.desc = description;
-		this.time = timedue;
+		this.description = description;
+		this.timedue = timedue;
 		
 	}
 }

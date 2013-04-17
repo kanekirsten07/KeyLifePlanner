@@ -7,6 +7,8 @@ import java.util.Date;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -32,13 +34,6 @@ import android.widget.TextView.OnEditorActionListener;
 public class CalendarActivity extends Activity implements OnClickListener{
 
 	
-	private ArrayList<Task> Sunday;
-	private ArrayList<Task> Monday;
-	private ArrayList<Task> Tuesday;
-	private ArrayList<Task> Wednesday;
-	private ArrayList<Task> Thursday;
-	private ArrayList<Task> Friday;
-	private ArrayList<Task> Saturday;
 	EditText taskedit;
 	MediaPlayer backgroundCalendar;
 	
@@ -74,16 +69,15 @@ public class CalendarActivity extends Activity implements OnClickListener{
 		}
        });
       */
-		Sunday = new ArrayList<Task>();
+		
 		
 		Task t = new Task("Do homework", "ten");
 		Task t1 = new Task("Brush teeth", "six");
-		Sunday.add(t);
-		Sunday.add(t1);
+		
 		ListView task_listview = (ListView) findViewById(R.id.task_list);
 		
 		
-		task_listview.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, Sunday));
+		//task_listview.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, Sunday));
 		
 	}
 	public class UserItemAdapter extends ArrayAdapter<Task>{
@@ -135,19 +129,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 		}
 
 	}
-	public class Task {
-		public String description;
-		public String timedue;
-		
-		public Task(String description, String timedue)
-		{
-			this.description = description;
-			this.timedue =timedue;
-		}
-		
-		
-
-	}
+	
 
 	
 	@Override
@@ -168,16 +150,31 @@ public class CalendarActivity extends Activity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-Intent i;
+		Intent i;
     	
     	switch (v.getId()){
     	case R.id.addtask:
     		Log.d("click", "Add Task was clicked");
-    		//i = new Intent (this, CalendarActivity.class);
     		
-    		//startActivity(i);
+    		i = new Intent (this, AddTaskActivity.class);
+    		
+    		
+    		startActivity(i);
     		break;
-		
+    	case R.id.sunday:
+    		break;
+    	case R.id.monday:
+    		break;
+    	case R.id.tuesday:
+    		break;
+    	case R.id.wednesday:
+    		break;
+    	case R.id.thursday:
+    		break;
+    	case R.id.friday:
+    		break;
+    	case R.id.saturday:
+    		break;
     	}
 	}
 

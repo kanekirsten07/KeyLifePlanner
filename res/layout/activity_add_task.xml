@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/CalendarBackgroundColor"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddTaskActivity" >
+
+    <EditText
+        android:id="@+id/taskname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="text" >
+
+        </EditText>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/taskname"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="51dp"
+            android:background="@color/AddTaskButtonColor"
+            android:text="@string/SubmitButtonLabel" />
+
+        <Spinner
+            android:id="@+id/task_spinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/taskname"
+            android:layout_below="@+id/taskname"
+            android:layout_marginTop="19dp"
+            android:entries="@array/task_types" />
+
+        <Spinner
+            android:id="@+id/time_due"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/submit"
+            android:layout_alignTop="@+id/task_spinner"
+            android:layout_marginRight="22dp"
+            android:entries="@array/times" />
+
+        <Spinner
+            android:id="@+id/day"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/task_spinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            android:entries="@array/days" />
+            
+</RelativeLayout>
