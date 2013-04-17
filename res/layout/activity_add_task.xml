@@ -2,91 +2,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#C2C2C2"
+    android:orientation="vertical"
     tools:context=".AddTaskActivity" >
 
-    <LinearLayout 
+    <TextView
+        android:id="@+id/addtask_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/addtasklabel"
+        android:textSize="60sp" />
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:gravity="center" >
 
         <TextView
             android:id="@+id/namelabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/namelabel" />
+            android:text="@string/namelabel"
+            android:textSize="20sp" />
+
         <EditText
             android:id="@+id/taskname"
-            android:layout_width="fill_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="66dp"
             android:background="@color/white"
             android:ems="10"
             android:imeOptions="actionDone"
-            android:inputType="text" >
+            android:inputType="text"
+            android:textSize="20sp" >
+
             <requestFocus />
         </EditText>
+    </LinearLayout>
 
-     </LinearLayout>
-     
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        
+        android:orientation="horizontal"
+        android:gravity="center"  >
+
         <TextView
             android:id="@+id/category_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/categorylabel" />
-        
+            android:text="@string/categorylabel" 
+            android:textSize="20sp"
+            android:gravity="center_vertical"/>
+
         <Spinner
             android:id="@+id/task_spinner"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/taskname"
-            android:layout_below="@+id/taskname"
-            android:layout_marginTop="19dp"
-            android:entries="@array/task_types" />
-        
-        </LinearLayout>
+            android:entries="@array/task_types"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
 
-     <LinearLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:gravity="center"  >
 
-         <TextView
+        <TextView
             android:id="@+id/dueby_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/duebylabel" />
-         <Spinner
+            android:text="@string/duebylabel" 
+            android:textSize="20sp"/>
+
+        <Spinner
             android:id="@+id/day"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/task_spinner"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="33dp"
             android:entries="@array/days" />
+
         <Spinner
             android:id="@+id/time_due"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/submit"
-            android:layout_alignTop="@+id/task_spinner"
-            android:layout_marginRight="22dp"
             android:entries="@array/times" />
-        </LinearLayout>
-        
-           <Button
-            android:id="@+id/submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/taskname"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="51dp"
-            android:background="@color/AddTaskButtonColor"
-            android:text="@string/SubmitButtonLabel" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/greenbutton"
+        android:text="@string/SubmitButtonLabel" 
+        android:layout_gravity="center" />
+
 </LinearLayout>

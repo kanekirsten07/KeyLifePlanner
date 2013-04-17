@@ -13,9 +13,11 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.app.Activity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 
 public class AddTaskActivity extends Activity implements OnClickListener{
 
@@ -48,9 +50,23 @@ public class AddTaskActivity extends Activity implements OnClickListener{
 		timedue = (Spinner)findViewById(R.id.time_due);
 		typeoftask = (Spinner)findViewById(R.id.task_spinner);
 	       
-Button submit = (Button)findViewById(R.id.submit);
-		
+		Button submit = (Button)findViewById(R.id.submit);	
 		submit.setOnClickListener(this);
+		
+		TextView title = (TextView)findViewById(R.id.addtask_title);	
+		Typeface tf1 = Typeface.createFromAsset(getAssets(),
+		        "fonts/governor.ttf");
+		title.setTypeface(tf1);
+		submit.setTypeface(tf1);
+		
+		TextView namelabel = (TextView)findViewById(R.id.namelabel);
+		TextView category_label = (TextView)findViewById(R.id.category_label);
+		TextView dueby_label = (TextView)findViewById(R.id.dueby_label);
+		Typeface tf2 = Typeface.createFromAsset(getAssets(),
+		        "fonts/Lorenabold.ttf");
+		namelabel.setTypeface(tf2);
+		category_label.setTypeface(tf2);
+		dueby_label.setTypeface(tf2);
 	}
 	@Override
 	public void onClick(View v) {

@@ -20,9 +20,12 @@
     <string name="SaturdayLabel">SAT</string>
     <string name="AchievementsButtonLabel">ACHIEVEMENTS</string>
     <string name="Avatar"> This is the avatar view</string>
-    <string name="namelabel">Task Name:</string>
-    <string name="categorylabel">Task Category:</string>
-    <string name="duebylabel">Due By:</string>
+    
+    <string name="addtasklabel">Add Task</string>
+    <string name="namelabel">TASK NAME : </string>
+    <string name="categorylabel">TASK CATEGORY : </string>
+    <string name="duebylabel">DUE BY : </string>
+    
 
     <string-array name="task_types">
         <item>School</item>
