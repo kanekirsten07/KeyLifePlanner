@@ -22,9 +22,9 @@
         android:layout_height="60dp"
         android:background="@drawable/greenbutton" style="@style/ButtonText"
         android:text="@string/CalendarButtonLabel"
-        android:drawableRight="@drawable/calendar" 
+        android:drawableRight="@drawable/calendarmain" 
         android:paddingRight="40dp"
-        android:drawablePadding="-40dp"/>
+        android:drawablePadding="-30dp"/>
     
      <Button
         android:id="@+id/viewAchievements"
