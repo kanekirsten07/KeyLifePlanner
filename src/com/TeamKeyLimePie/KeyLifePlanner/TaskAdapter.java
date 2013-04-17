@@ -15,7 +15,6 @@ public class TaskAdapter extends ArrayAdapter<Task>{
 	Context context;
 	int layoutResourceId;
 	ArrayList<Task> tasks;
-	String desc;
 	
 	public TaskAdapter(Context context, int layoutResourceId, 
 			ArrayList<Task> tasks){
