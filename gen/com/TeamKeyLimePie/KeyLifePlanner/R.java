@@ -36,13 +36,17 @@ public final class R {
         public static final int addtaskbutton=0x7f020001;
         public static final int bluebutton=0x7f020002;
         public static final int calendar=0x7f020003;
-        public static final int calendarsmall=0x7f020004;
-        public static final int calendarsmall2=0x7f020005;
+        public static final int calendar2=0x7f020004;
+        public static final int calendarsmall=0x7f020005;
         public static final int greenbutton=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
-        public static final int inactiveday=0x7f020008;
-        public static final int star=0x7f020009;
-        public static final int yellowbutton=0x7f02000a;
+        public static final int homework=0x7f020007;
+        public static final int hygiene=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
+        public static final int inactiveday=0x7f02000a;
+        public static final int othericon=0x7f02000b;
+        public static final int star=0x7f02000c;
+        public static final int workicon=0x7f02000d;
+        public static final int yellowbutton=0x7f02000e;
     }
     public static final class id {
         public static final int action_settings=0x7f0b0018;
