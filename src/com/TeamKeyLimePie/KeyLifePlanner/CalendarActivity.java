@@ -86,15 +86,16 @@ public class CalendarActivity extends Activity implements OnClickListener{
 		sat.setOnClickListener(this);
 		addTask.setOnClickListener(this);
       
-		Sunday = new ArrayList<Task>();
-		Monday = new ArrayList<Task>();
-		Task t1 = new Task("do hw", "10");
-		Task t2 = new Task("shower", "9");
-		Task t3 = new Task("bruth teeth", "8");
-		Sunday.add(t1);
-		Sunday.add(t2);
-		Monday.add(t1);
-		Monday.add(t3);
+		Sunday = ((GlobalApp)getApplication()).getSunday();
+		Monday = ((GlobalApp)getApplication()).getMonday();
+		Tuesday = ((GlobalApp)getApplication()).getTuesday();
+		Wednesday = ((GlobalApp)getApplication()).getWednesday();
+		Thursday = ((GlobalApp)getApplication()).getThursday();
+		Friday = ((GlobalApp)getApplication()).getFriday();
+		Saturday = ((GlobalApp)getApplication()).getSaturday();
+		
+		 
+		
 		
 		
 		 task_listview = (ListView) findViewById(R.id.task_list);

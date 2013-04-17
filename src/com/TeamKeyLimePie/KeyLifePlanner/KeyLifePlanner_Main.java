@@ -36,12 +36,9 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 		
 		viewCalendar.setOnClickListener(this);
 		viewAchievements.setOnClickListener(this);
-		ArrayList<Task> Sunday = new ArrayList<Task>();
-		Task t = new Task("do hw", "10");
-		Task t1 = new Task("brush teeth", "6");
-		Sunday.add(t);
-		Sunday.add(t1);
-		((GlobalApp)getApplication()).setSunday(Sunday);
+		
+		
+		
 	}
 	
 	

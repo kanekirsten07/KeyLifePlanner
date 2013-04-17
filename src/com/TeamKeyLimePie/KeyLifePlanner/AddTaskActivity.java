@@ -18,13 +18,13 @@ import android.content.Intent;
 
 public class AddTaskActivity extends Activity implements OnClickListener{
 
-	private ArrayList<Task> Sunday ;
-	private ArrayList<Task> Monday ;
-	private ArrayList<Task> Tuesday;
-	private ArrayList<Task> Wednesday;
-	private ArrayList<Task> Thursday;
-	private ArrayList<Task> Friday;
-	private ArrayList<Task> Saturday ;
+	public ArrayList<Task> Sunday ;
+	public ArrayList<Task> Monday ;
+	public ArrayList<Task> Tuesday ;
+	public ArrayList<Task> Wednesday ;
+	public ArrayList<Task> Thursday ;
+	public ArrayList<Task> Friday ;
+	public ArrayList<Task> Saturday ;
 	private EditText taskedit;
 	private Spinner daydue;
 	private Spinner timedue;
@@ -61,10 +61,37 @@ Button submit = (Button)findViewById(R.id.submit);
     		String due = timedue.getSelectedItem().toString();
     		String type= typeoftask.getSelectedItem().toString();
     		String day = daydue.getSelectedItem().toString();
-    		Log.d("description", desc);
-    		Log.d("due", due);
-    		Log.d("type", type);
-    		Log.d("day", day);
+    		Task t = new Task(desc, due, type, 0);
+    		if(day.equalsIgnoreCase("Sunday"))
+    		{
+    			Sunday.add(t);
+    			((GlobalApp)getApplication()).setSunday(Sunday);
+    		}else if(day.equalsIgnoreCase("Monday")){
+    			Monday.add(t);
+    			((GlobalApp)getApplication()).setMonday(Monday);
+    		}else if(day.equalsIgnoreCase("Tuesday"))
+    		{
+    			Tuesday.add(t);
+    			((GlobalApp)getApplication()).setTuesday(Tuesday);
+    			Log.d("Tues", Tuesday.get(0).description);
+    		}else if(day.equalsIgnoreCase("Wednesday"))
+    		{
+    			Wednesday.add(t);
+    			((GlobalApp)getApplication()).setWednesday(Wednesday);
+    		}else if(day.equalsIgnoreCase("Thursday"))
+    		{
+    			Thursday.add(t);
+    			((GlobalApp)getApplication()).setThursday(Thursday);
+    		}else if(day.equalsIgnoreCase("Friday"))
+    		{
+    			Friday.add(t);
+    			((GlobalApp)getApplication()).setFriday(Friday);
+    		}else if(day.equalsIgnoreCase("Saturday"))
+    		{
+    			Saturday.add(t);
+    			((GlobalApp)getApplication()).setSaturday(Saturday);
+    		}
+    		
     		break;
 		}
 		

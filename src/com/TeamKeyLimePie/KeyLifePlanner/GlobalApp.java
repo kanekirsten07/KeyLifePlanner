@@ -7,13 +7,13 @@ import java.util.ArrayList;
 import android.app.Application;
 
 public class GlobalApp extends Application {
-	private ArrayList<Task> Sunday ;
-	private ArrayList<Task> Monday ;
-	private ArrayList<Task> Tuesday;
-	private ArrayList<Task> Wednesday;
-	private ArrayList<Task> Thursday;
-	private ArrayList<Task> Friday;
-	private ArrayList<Task> Saturday ;
+	private ArrayList<Task> Sunday = new ArrayList<Task>();
+	private ArrayList<Task> Monday  = new ArrayList<Task>();
+	private ArrayList<Task> Tuesday = new ArrayList<Task>();
+	private ArrayList<Task> Wednesday = new ArrayList<Task>();
+	private ArrayList<Task> Thursday = new ArrayList<Task>();
+	private ArrayList<Task> Friday = new ArrayList<Task>();
+	private ArrayList<Task> Saturday= new ArrayList<Task>() ;
 	private int money;
 	public void setmoney(int num)
 	{
@@ -47,6 +47,10 @@ public class GlobalApp extends Application {
 	public void setFriday(ArrayList<Task> fri)
 	{
 		this.Friday = fri;
+	}
+	public void setSaturday(ArrayList<Task> sat)
+	{
+		this.Saturday=sat;
 	}
 	
 	public ArrayList<Task> getSunday(){
