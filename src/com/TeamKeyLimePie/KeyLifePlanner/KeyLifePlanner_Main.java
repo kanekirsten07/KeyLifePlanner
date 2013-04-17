@@ -35,6 +35,7 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 		Button viewAchievements = (Button)findViewById(R.id.viewAchievements);
 		
 		viewCalendar.setOnClickListener(this);
+		viewAchievements.setOnClickListener(this);
 		ArrayList<Task> Sunday = new ArrayList<Task>();
 		Task t = new Task("do hw", "10");
 		Task t1 = new Task("brush teeth", "6");
@@ -82,6 +83,10 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
     	case R.id.viewAvatar:
     		i = new Intent (this, AvatarActivity.class);
     		
+    		startActivity(i);
+    		break;
+    	case R.id.viewAchievements:
+    		i = new Intent(this, AchievementActivity.class);
     		startActivity(i);
     		break;
     	

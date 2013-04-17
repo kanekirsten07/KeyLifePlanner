@@ -86,8 +86,8 @@
         <item name="android:shadowRadius">2</item>
     </style>
 
-    
     <string name="title_activity_add_task">AddTaskActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_achievement">AchievementActivity</string>
 
 </resources>

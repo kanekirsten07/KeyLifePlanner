@@ -46,43 +46,49 @@ public final class R {
         public static final int yellowbutton=0x7f020009;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b0015;
-        public static final int addtask=0x7f0b000c;
-        public static final int calendarActivity=0x7f0b000f;
-        public static final int day=0x7f0b0004;
-        public static final int description=0x7f0b0013;
-        public static final int friday=0x7f0b000a;
-        public static final int monday=0x7f0b0006;
-        public static final int saturday=0x7f0b000b;
-        public static final int submit=0x7f0b0001;
-        public static final int sunday=0x7f0b0005;
-        public static final int task_list=0x7f0b000d;
-        public static final int task_spinner=0x7f0b0002;
-        public static final int taskimage=0x7f0b0012;
-        public static final int taskname=0x7f0b0000;
-        public static final int textView1=0x7f0b000e;
-        public static final int thursday=0x7f0b0009;
-        public static final int time_due=0x7f0b0003;
-        public static final int timedue=0x7f0b0014;
-        public static final int tuesday=0x7f0b0007;
-        public static final int viewAchievements=0x7f0b0010;
-        public static final int viewAvatar=0x7f0b0011;
-        public static final int wednesday=0x7f0b0008;
+        public static final int achievedescription=0x7f0b0001;
+        public static final int achievementimage=0x7f0b0000;
+        public static final int achievementlist=0x7f0b0002;
+        public static final int action_settings=0x7f0b0018;
+        public static final int addtask=0x7f0b000f;
+        public static final int calendarActivity=0x7f0b0012;
+        public static final int day=0x7f0b0007;
+        public static final int description=0x7f0b0016;
+        public static final int friday=0x7f0b000d;
+        public static final int monday=0x7f0b0009;
+        public static final int saturday=0x7f0b000e;
+        public static final int submit=0x7f0b0004;
+        public static final int sunday=0x7f0b0008;
+        public static final int task_list=0x7f0b0010;
+        public static final int task_spinner=0x7f0b0005;
+        public static final int taskimage=0x7f0b0015;
+        public static final int taskname=0x7f0b0003;
+        public static final int textView1=0x7f0b0011;
+        public static final int thursday=0x7f0b000c;
+        public static final int time_due=0x7f0b0006;
+        public static final int timedue=0x7f0b0017;
+        public static final int tuesday=0x7f0b000a;
+        public static final int viewAchievements=0x7f0b0013;
+        public static final int viewAvatar=0x7f0b0014;
+        public static final int wednesday=0x7f0b000b;
     }
     public static final class layout {
-        public static final int activity_add_task=0x7f030000;
-        public static final int activity_avatar=0x7f030001;
-        public static final int activity_calendar=0x7f030002;
-        public static final int activity_key_life_planner__main=0x7f030003;
-        public static final int add_task_view=0x7f030004;
-        public static final int listitem=0x7f030005;
+        public static final int achievementitem=0x7f030000;
+        public static final int activity_achievement=0x7f030001;
+        public static final int activity_add_task=0x7f030002;
+        public static final int activity_avatar=0x7f030003;
+        public static final int activity_calendar=0x7f030004;
+        public static final int activity_key_life_planner__main=0x7f030005;
+        public static final int add_task_view=0x7f030006;
+        public static final int listitem=0x7f030007;
     }
     public static final class menu {
-        public static final int add_task=0x7f0a0000;
-        public static final int avatar=0x7f0a0001;
-        public static final int calendar=0x7f0a0002;
-        public static final int calendar_view=0x7f0a0003;
-        public static final int key_life_planner__main=0x7f0a0004;
+        public static final int achievement=0x7f0a0000;
+        public static final int add_task=0x7f0a0001;
+        public static final int avatar=0x7f0a0002;
+        public static final int calendar=0x7f0a0003;
+        public static final int calendar_view=0x7f0a0004;
+        public static final int key_life_planner__main=0x7f0a0005;
     }
     public static final class raw {
         public static final int beginnings=0x7f040000;
@@ -108,6 +114,7 @@ public final class R {
         public static final int app_name=0x7f060000;
         public static final int calendar=0x7f060005;
         public static final int hello_world=0x7f060015;
+        public static final int title_activity_achievement=0x7f060016;
         public static final int title_activity_add_task=0x7f060014;
         public static final int title_activity_avatar=0x7f060013;
         public static final int title_activity_calendar=0x7f060003;

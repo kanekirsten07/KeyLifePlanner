@@ -36,7 +36,14 @@ public class CalendarActivity extends Activity implements OnClickListener{
 	
 	EditText taskedit;
 	MediaPlayer backgroundCalendar;
-	
+	public ArrayList<Task> Sunday ;
+	public ArrayList<Task> Monday ;
+	public ArrayList<Task> Tuesday ;
+	public ArrayList<Task> Wednesday ;
+	public ArrayList<Task> Thursday ;
+	public ArrayList<Task> Friday ;
+	public ArrayList<Task> Saturday ;
+	public ListView task_listview;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,36 +55,38 @@ public class CalendarActivity extends Activity implements OnClickListener{
 		backgroundCalendar.start();
 		
 		Button addTask = (Button)findViewById(R.id.addtask);
+		Button sun = (Button)findViewById(R.id.sunday);
+		Button mon = (Button)findViewById(R.id.monday);
+		Button tue = (Button)findViewById(R.id.tuesday);
+		Button wed = (Button)findViewById(R.id.wednesday);
+		Button thur = (Button)findViewById(R.id.thursday);
+		Button fri = (Button)findViewById(R.id.friday);
+		Button sat = (Button)findViewById(R.id.saturday);
 		
+		sun.setOnClickListener(this);
+		mon.setOnClickListener(this);
+		tue.setOnClickListener(this);
+		wed.setOnClickListener(this);
+		thur.setOnClickListener(this);
+		fri.setOnClickListener(this);
+		sat.setOnClickListener(this);
 		addTask.setOnClickListener(this);
-       /*taskedit = (EditText)findViewById(R.id.taskname);
-       
-       taskedit.setOnEditorActionListener(new OnEditorActionListener() {
-    	   
-
-		@Override
-		public boolean onEditorAction(TextView v, int actionId, KeyEvent arg2) {
-			if(actionId == EditorInfo.IME_ACTION_DONE){
-				String strvalue = taskedit.getText().toString();
-	    		   Log.d("EditText value:", strvalue);
-	    		   Log.d("Done", "pressed");
-	    		   return true;
-			}else
-			{
-				return false;
-			}
-		}
-       });
-      */
+      
+		Sunday = new ArrayList<Task>();
+		Monday = new ArrayList<Task>();
+		Task t1 = new Task("do hw", "10");
+		Task t2 = new Task("shower", "9");
+		Task t3 = new Task("bruth teeth", "8");
+		Sunday.add(t1);
+		Sunday.add(t2);
+		Monday.add(t1);
+		Monday.add(t3);
 		
 		
-		Task t = new Task("Do homework", "ten");
-		Task t1 = new Task("Brush teeth", "six");
-		
-		ListView task_listview = (ListView) findViewById(R.id.task_list);
+		 task_listview = (ListView) findViewById(R.id.task_list);
 		
 		
-		//task_listview.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, Sunday));
+		task_listview.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, Sunday));
 		
 	}
 	public class UserItemAdapter extends ArrayAdapter<Task>{
@@ -145,35 +154,81 @@ public class CalendarActivity extends Activity implements OnClickListener{
 		super.onResume();
 		backgroundCalendar.start();
 	}
+	public void setInactive()
+	{
+		Button b;
+		b = (Button) findViewById(R.id.sunday);
+		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.inactiveday));
+		b = (Button) findViewById(R.id.monday);
+		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.inactiveday));
+		b = (Button) findViewById(R.id.tuesday);
+		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.inactiveday));
+		b = (Button) findViewById(R.id.wednesday);
+		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.inactiveday));
+		b = (Button) findViewById(R.id.thursday);
+		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.inactiveday));
+		b = (Button) findViewById(R.id.friday);
+		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.inactiveday));
+		b = (Button) findViewById(R.id.saturday);
+		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.inactiveday));
+	}
 	
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		Intent i;
-    	
+    	Button b;
     	switch (v.getId()){
     	case R.id.addtask:
     		Log.d("click", "Add Task was clicked");
     		
     		i = new Intent (this, AddTaskActivity.class);
-    		
-    		
     		startActivity(i);
     		break;
     	case R.id.sunday:
+    		b = (Button) findViewById(R.id.sunday);
+    		Log.d("Sunday", "was clicked");
+    		setInactive();
+    		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.activeday));
+    		task_listview.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, Sunday));
     		break;
     	case R.id.monday:
+    		b = (Button) findViewById(R.id.monday);
+    		setInactive();
+    		task_listview.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, Monday));
+    		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.activeday));
     		break;
     	case R.id.tuesday:
+    		b = (Button) findViewById(R.id.tuesday);
+    		setInactive();
+    		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.activeday));
+    		task_listview.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, Tuesday));
     		break;
     	case R.id.wednesday:
+    		b = (Button) findViewById(R.id.wednesday);
+    		setInactive();
+    		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.activeday));
+    		task_listview.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, Wednesday));
     		break;
     	case R.id.thursday:
+    		b = (Button) findViewById(R.id.thursday);
+    		setInactive();
+    		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.activeday));
+    		task_listview.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, Thursday));
     		break;
     	case R.id.friday:
+    		b = (Button) findViewById(R.id.friday);
+    		setInactive();
+    		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.activeday));
+    		task_listview.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, Friday));
     		break;
     	case R.id.saturday:
+    		b = (Button) findViewById(R.id.saturday);
+    		
+    		setInactive();
+    		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.activeday));
     		break;
     	}
 	}
