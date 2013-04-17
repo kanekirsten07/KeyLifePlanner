@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.TeamKeyLimePie.KeyLifePlanner.CalendarActivity.UserItemAdapter;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
@@ -18,12 +19,17 @@ import android.widget.TextView;
 
 public class AchievementActivity extends Activity {
 
+	MediaPlayer backgroundAchievement;
 	
 	public ListView achieve_view;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_achievement);
+		
+		backgroundAchievement = MediaPlayer.create(AchievementActivity.this, R.raw.sailingintoabyss);
+		backgroundAchievement.setLooping(true);
+		backgroundAchievement.start();
 		
 		ArrayList<Achievement> ach = new ArrayList<Achievement>();
 		
@@ -118,6 +124,20 @@ public class AchievementActivity extends Activity {
 
 		}
 
+	}
+	
+	@Override
+	protected void onPause()
+	{
+		super.onPause();
+		backgroundAchievement.stop();
+	}
+
+	@Override
+	protected void onResume()
+	{
+		super.onResume();
+		backgroundAchievement.start();
 	}
 
 }
