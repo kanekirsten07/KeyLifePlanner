@@ -346,6 +346,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
     		activearraylist=Saturday;
     		setInactive();
     		b.setBackgroundDrawable(getResources().getDrawable(R.drawable.activeday));
+    		task_listview.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, Saturday));
     		activelist="Saturday";
     		break;
     	}
