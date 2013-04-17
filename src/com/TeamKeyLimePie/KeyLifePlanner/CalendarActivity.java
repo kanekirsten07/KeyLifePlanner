@@ -31,6 +31,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -225,6 +226,28 @@ public class CalendarActivity extends Activity implements OnClickListener{
 			if(t != null){
 				TextView description = (TextView)v.findViewById(R.id.description);
 				TextView timedue = (TextView)v.findViewById(R.id.timedue);
+				ImageView taskimage = (ImageView)v.findViewById(R.id.taskimage);
+				if(t.typeoftask.equalsIgnoreCase("School")){
+					taskimage.setImageResource(R.drawable.homework);
+				}
+				else if(t.typeoftask.equalsIgnoreCase("Work")){
+					taskimage.setImageResource(R.drawable.workicon); 
+				}
+				else if(t.typeoftask.equalsIgnoreCase("Hygiene")){
+					taskimage.setImageResource(R.drawable.hygiene); 
+				}
+				else{
+					taskimage.setImageResource(R.drawable.calendar); 
+				}
+				
+//				else if (t.typeoftask.equalsIgnoreCase("Travel")){
+//					taskimage.setImageResource(R.drawable.othericon);
+//				}
+//				else if(t.typeoftask.equalsIgnoreCase("Custom")){
+//					taskimage.setImageResource(R.drawable.calendar);
+//				}
+				
+				
 				if(description != null){
 					description.setText(t.description);
 				}
