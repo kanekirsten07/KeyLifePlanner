@@ -37,7 +37,7 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 		viewCalendar.setOnClickListener(this);
 		viewAchievements.setOnClickListener(this);
 		
-		
+		viewAvatar.setOnClickListener(this);
 		
 	}
 	

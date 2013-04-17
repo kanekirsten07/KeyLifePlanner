@@ -14,10 +14,15 @@ public class GlobalApp extends Application {
 	private ArrayList<Task> Thursday = new ArrayList<Task>();
 	private ArrayList<Task> Friday = new ArrayList<Task>();
 	private ArrayList<Task> Saturday= new ArrayList<Task>() ;
-	private int money;
+	private int money = 0;
 	public void setmoney(int num)
 	{
 		this.money = num;
+	}
+	
+	public void incmoney(int num)
+	{
+		this.money = money + num;
 	}
 	public int getmoney()
 	{
