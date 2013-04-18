@@ -6,13 +6,14 @@ import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class StoreActivity extends Activity {
+public class StoreActivity extends Activity implements OnClickListener{
 	MediaPlayer backgroundShop;
 	public int bank;
 	private ArrayList<Item> i;
@@ -20,13 +21,11 @@ public class StoreActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_avatar);
+		setContentView(R.layout.activity_store);
 
 		backgroundShop = MediaPlayer.create(StoreActivity.this, R.raw.shop);
 		backgroundShop.setLooping(true);
 		backgroundShop.start();
-
-		bank = ((GlobalApp)getApplication()).getmoney();
 
 		GridView gridview = (GridView) findViewById(R.id.gridview);
 		gridview.setAdapter(new ImageAdapter(this));
@@ -35,29 +34,36 @@ public class StoreActivity extends Activity {
 		{
 			public void onItemClick(AdapterView<?> parent, View v, int position, long id) 
 			{
-
+				ArrayList<Item> i = ((GlobalApp)getApplication()).getItem();
+				bank = ((GlobalApp)getApplication()).getmoney();
+				
 				//checks if the item is already bought
-				if(i.isBought())
+				if(i.get(position).isBought())
 				{
-					Toast.makeText(StoreActivity.this, "Already Bought!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(StoreActivity.this, "Already bought!", Toast.LENGTH_SHORT).show();
 				}
 				//checks if enough money
-				else if((((GlobalApp)getApplication()).getmoney() - i.getValue()) < 0)
+				else if((bank - i.get(position).getValue() < 0))
 				{
 					Toast.makeText(StoreActivity.this, "Not enough money!", Toast.LENGTH_SHORT).show();
 				}
 				//decreases amount of money in wallet
 				else
 				{
-					((GlobalApp)getApplication()).decmoney(i.getValue());
-					Toast.makeText(StoreActivity.this, "Bought Item!", Toast.LENGTH_SHORT).show();
+					((GlobalApp)getApplication()).decmoney(i.get(position).getValue());
+					Toast.makeText(StoreActivity.this, "Bought item!", Toast.LENGTH_SHORT).show();
 				}
-
 			}
 		});
 
 		TextView wallet = (TextView)findViewById(R.id.wallet);
 		wallet.setText("Amount of Coins: " + bank);
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

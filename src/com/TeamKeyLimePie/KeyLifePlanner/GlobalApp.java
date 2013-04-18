@@ -15,7 +15,7 @@ public class GlobalApp extends Application {
 	private ArrayList<Task> Friday = new ArrayList<Task>();
 	private ArrayList<Task> Saturday= new ArrayList<Task>();
 	private int money = 0;
-	private ArrayList<Item> store = new ArrayList<Item>();
+	private ArrayList<Item> item = new ArrayList<Item>();
 	
 	
 	
@@ -89,6 +89,9 @@ public class GlobalApp extends Application {
 	public ArrayList<Task> getSaturday(){
 	return Saturday;
 	}
+	public ArrayList<Item> getItem(){
+		return item;
+	}
 
 	
 	private int numHygiene = 0;
@@ -121,4 +124,5 @@ public class GlobalApp extends Application {
 	public void setNumTotalTasks(){this.numTotalTasks = numHygiene + numWork + numSchool + numCustom;}
 	public void incNumTotalTasks(){this.numTotalTasks = getNumTotalTasks() +1; }
 	public int getNumTotalTasks(){return numTotalTasks;}
+
 }
