@@ -7,6 +7,7 @@ import com.TeamKeyLimePie.KeyLifePlanner.CalendarActivity.UserItemAdapter;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -18,12 +19,18 @@ import android.widget.TextView;
 
 public class AchievementActivity extends Activity {
 
-	
 	public ListView achieve_view;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_achievement);
+		
+		TextView title = (TextView)findViewById(R.id.achievementheading);	
+		Typeface tf1 = Typeface.createFromAsset(getAssets(),
+		        "fonts/governor.ttf");
+		title.setTypeface(tf1);
+		
 		
 		ArrayList<Achievement> ach = new ArrayList<Achievement>();
 		

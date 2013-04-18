@@ -32,7 +32,7 @@
         <item>Hygiene</item>
         <item>Travel</item>
         <item>Work</item>
-        <item>Custom</item>
+        <item>Other</item>
     </string-array>
     <string-array name="days">
         <item>Sunday</item>
@@ -44,6 +44,7 @@
         <item>Saturday</item>
     </string-array>
     <string-array name="times">
+        <item>12 am</item>
         <item>1 am</item>
         <item>2 am</item>
         <item>3 am</item>
@@ -55,7 +56,7 @@
         <item>9 am</item>
         <item>10 am</item>
         <item>11 am</item>
-        <item>12 am</item>
+        <item>12 pm</item>
         <item>1 pm</item>
         <item>2 pm</item>
         <item>3 pm</item>
@@ -67,7 +68,6 @@
         <item>9 pn</item>
         <item>10 pm</item>
         <item>11 pm</item>
-        <item>12 am</item>
     </string-array>
 
     <color name="white">#FFFFFF</color>

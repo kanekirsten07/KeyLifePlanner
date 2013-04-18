@@ -51,34 +51,35 @@ public final class R {
     }
     public static final class id {
         public static final int achievedescription=0x7f0b0001;
+        public static final int achievementheading=0x7f0b0002;
         public static final int achievementimage=0x7f0b0000;
-        public static final int achievementlist=0x7f0b0002;
-        public static final int action_settings=0x7f0b001c;
-        public static final int addtask=0x7f0b0013;
-        public static final int addtask_title=0x7f0b0003;
-        public static final int calendarActivity=0x7f0b0016;
-        public static final int category_label=0x7f0b0006;
-        public static final int day=0x7f0b0009;
-        public static final int description=0x7f0b001a;
-        public static final int dueby_label=0x7f0b0008;
-        public static final int friday=0x7f0b0011;
-        public static final int monday=0x7f0b000d;
-        public static final int namelabel=0x7f0b0004;
-        public static final int saturday=0x7f0b0012;
-        public static final int submit=0x7f0b000b;
-        public static final int sunday=0x7f0b000c;
-        public static final int task_list=0x7f0b0014;
-        public static final int task_spinner=0x7f0b0007;
-        public static final int taskimage=0x7f0b0019;
-        public static final int taskname=0x7f0b0005;
-        public static final int textView1=0x7f0b0015;
-        public static final int thursday=0x7f0b0010;
-        public static final int time_due=0x7f0b000a;
-        public static final int timedue=0x7f0b001b;
-        public static final int tuesday=0x7f0b000e;
-        public static final int viewAchievements=0x7f0b0017;
-        public static final int viewAvatar=0x7f0b0018;
-        public static final int wednesday=0x7f0b000f;
+        public static final int achievementlist=0x7f0b0003;
+        public static final int action_settings=0x7f0b001d;
+        public static final int addtask=0x7f0b0014;
+        public static final int addtask_title=0x7f0b0004;
+        public static final int calendarActivity=0x7f0b0017;
+        public static final int category_label=0x7f0b0007;
+        public static final int day=0x7f0b000a;
+        public static final int description=0x7f0b001b;
+        public static final int dueby_label=0x7f0b0009;
+        public static final int friday=0x7f0b0012;
+        public static final int monday=0x7f0b000e;
+        public static final int namelabel=0x7f0b0005;
+        public static final int saturday=0x7f0b0013;
+        public static final int submit=0x7f0b000c;
+        public static final int sunday=0x7f0b000d;
+        public static final int task_list=0x7f0b0015;
+        public static final int task_spinner=0x7f0b0008;
+        public static final int taskimage=0x7f0b001a;
+        public static final int taskname=0x7f0b0006;
+        public static final int textView1=0x7f0b0016;
+        public static final int thursday=0x7f0b0011;
+        public static final int time_due=0x7f0b000b;
+        public static final int timedue=0x7f0b001c;
+        public static final int tuesday=0x7f0b000f;
+        public static final int viewAchievements=0x7f0b0018;
+        public static final int viewAvatar=0x7f0b0019;
+        public static final int wednesday=0x7f0b0010;
     }
     public static final class layout {
         public static final int achievementitem=0x7f030000;
@@ -156,7 +157,6 @@ public final class R {
          */
         public static final int AppBaseTheme=0x7f090001;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f090002;
         public static final int ButtonText=0x7f090000;
