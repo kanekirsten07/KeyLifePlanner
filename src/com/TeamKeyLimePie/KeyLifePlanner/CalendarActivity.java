@@ -75,9 +75,6 @@ public class CalendarActivity extends Activity implements OnClickListener{
 		myContext =this;
 
 		Button addTask = (Button)findViewById(R.id.addtask);		
-		Typeface tf1 = Typeface.createFromAsset(getAssets(),
-				"fonts/governor.ttf");
-		addTask.setTypeface(tf1);
 
 		Button sun = (Button)findViewById(R.id.sunday);
 		Button mon = (Button)findViewById(R.id.monday);

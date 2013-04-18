@@ -9,8 +9,8 @@
     <string name="calendar"> This is the Calendar View</string>
     <string name="CalendarButtonLabel">CALENDAR</string>
     <string name="AvatarButtonLabel">CUSTOMIZE AVATAR</string>
-    <string name="SubmitButtonLabel">Submit </string>
-    <string name="AddButtonLabel"> + Add New Task</string>
+    <string name="SubmitButtonLabel">SUBMIT </string>
+    <string name="AddButtonLabel"> + ADD NEW TASK</string>
     <string name="SundayLabel">SUN</string>
     <string name="MondayLabel">MON</string>
     <string name="TuesdayLabel">TUE</string>

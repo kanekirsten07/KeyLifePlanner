@@ -80,7 +80,8 @@
         android:layout_margin="10dp"
         android:textSize="30sp"
         android:background="@drawable/addtaskbutton"
-        android:text="@string/AddButtonLabel"  />
+        android:text="@string/AddButtonLabel" 
+        style="@style/ButtonText" />
     
     <ListView 
         android:id="@+id/task_list"
