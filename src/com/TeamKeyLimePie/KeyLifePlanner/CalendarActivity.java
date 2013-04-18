@@ -36,6 +36,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.TextView.OnEditorActionListener;
 
 public class CalendarActivity extends Activity implements OnClickListener{
@@ -59,6 +60,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 	int reward = 0;
 	String taskName; 
 	public ArrayList<Task>activearraylist;
+	UserItemAdapter u;
 
 
 
@@ -135,8 +137,9 @@ public class CalendarActivity extends Activity implements OnClickListener{
 							case DialogInterface.BUTTON_POSITIVE:
 								((GlobalApp)getApplication()).incmoney(reward);
 								activearraylist.remove(position);
-								UserItemAdapter u = (UserItemAdapter) task_listview.getAdapter();
+								
 								u.notifyDataSetChanged();
+								Toast.makeText(getApplicationContext(), "You've earned " + reward + "coins!", Toast.LENGTH_LONG).show();
 								break;
 							case DialogInterface.BUTTON_NEGATIVE:
 								break;
@@ -226,7 +229,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 
 
 		task_listview.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, Sunday));
-
+		u = (UserItemAdapter) task_listview.getAdapter();
 	}
 
 	public class UserItemAdapter extends ArrayAdapter<Task>{
@@ -316,6 +319,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 	{
 		super.onResume();
 		backgroundCalendar.start();
+		u.notifyDataSetChanged();
 	}
 	public void setInactive()
 	{
