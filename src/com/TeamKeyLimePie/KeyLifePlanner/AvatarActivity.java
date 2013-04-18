@@ -1,5 +1,7 @@
 package com.TeamKeyLimePie.KeyLifePlanner;
 
+import java.util.ArrayList;
+
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
@@ -12,6 +14,7 @@ public class AvatarActivity extends Activity{
 
 	MediaPlayer backgroundShop;
 	public int bank;
+	private ArrayList<Item> i;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +34,18 @@ public class AvatarActivity extends Activity{
 		{
 			public void onItemClick(AdapterView<?> parent, View v, int position, long id) 
 			{
-				//if item was already bought...
-				Toast.makeText(AvatarActivity.this, "Avatar Updated!", Toast.LENGTH_SHORT).show();
-				//update avatar
+				//checks if the item as been bought yet
+				if(!(i.isBought()))
+				{
+					Toast.makeText(AvatarActivity.this, "Not bought yet!", Toast.LENGTH_SHORT).show();
+				}
+				//updates avatar
+				else
+				{
+					Toast.makeText(AvatarActivity.this, "Avatar Updated!", Toast.LENGTH_SHORT).show();
+					//update avatar
+				}
 				
-				//else
-				Toast.makeText(AvatarActivity.this, "Item Bought!", Toast.LENGTH_SHORT).show();
-				//add item and subtract money from user
-				//update avatar
 			}
 		});
 		
