@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="6dip"
         android:focusable="false"
-        android:src="@drawable/calendar"/>
+        />
     
         
      <TextView 

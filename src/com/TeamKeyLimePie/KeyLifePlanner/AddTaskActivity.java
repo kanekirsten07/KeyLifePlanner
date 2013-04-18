@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.app.Activity;
 
 import android.content.Intent;
@@ -111,7 +112,8 @@ public class AddTaskActivity extends Activity implements OnClickListener{
     			Saturday.add(t);
     			((GlobalApp)getApplication()).setSaturday(Saturday);
     		}
-    		
+
+    		Toast.makeText(getApplicationContext(), "Task Added to " + day, Toast.LENGTH_LONG).show();
     		break;
 		}
 		
