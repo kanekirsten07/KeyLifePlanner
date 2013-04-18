@@ -1,6 +1,7 @@
 package com.TeamKeyLimePie.KeyLifePlanner;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.TeamKeyLimePie.KeyLifePlanner.CalendarActivity.UserItemAdapter;
 
@@ -14,6 +15,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -30,10 +32,21 @@ public class AchievementActivity extends Activity {
 		backgroundAchievement = MediaPlayer.create(AchievementActivity.this, R.raw.sailingintoabyss);
 		backgroundAchievement.setLooping(true);
 		backgroundAchievement.start();
-		
+
+
+		 int numHygiene = ((GlobalApp)getApplication()).getNumHygiene();
+		 int numWork = ((GlobalApp)getApplication()).getNumWork();
+		 int numSchool = ((GlobalApp)getApplication()).getNumSchool();
+		 int numTravel = ((GlobalApp)getApplication()).getNumTravel(); 
+		 int numCustom = ((GlobalApp)getApplication()).getNumCustom(); 
+		 int numTotalTasks =((GlobalApp)getApplication()).getNumTotalTasks();
+		 int coins = ((GlobalApp)getApplication()).getmoney(); 
+		 
 		ArrayList<Achievement> ach = new ArrayList<Achievement>();
 		
-		Achievement a1 = new Achievement("First Day!" + "\n"+ " Welcome to Key Life Planner!", false);
+	
+		
+		Achievement a1 = new Achievement("First Day!" + "\n"+ " Welcome to Key Life Planner!", true);
 		Achievement a2 = new Achievement("Clean!" + "\n"+" You Have Completed a Hygiene Tasks", false);
 		Achievement a3 = new Achievement("Hard Working!" + "\n"+" You have completed a Work task", false);
 		Achievement a4 = new Achievement("Good Student!" + "\n"+" You have compeleted a School task", false);
@@ -55,7 +68,7 @@ public class AchievementActivity extends Activity {
 		Achievement a20 = new Achievement("Task Sage!"+ "\n"+"You Have Completed 512 Tasks", false);
 
 		
-
+	
 		
 		ach.add(a1);
 		ach.add(a2);
@@ -81,6 +94,74 @@ public class AchievementActivity extends Activity {
 		
 		achieve_view = (ListView)findViewById(R.id.achievementlist);
 		achieve_view.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, ach));
+	
+		//Case by case if statements 
+		if(numHygiene == 1){
+			a2.hascompleted = true; 
+		}
+		if(numWork == 1){
+			a3.hascompleted = true; 
+		}
+		if(numSchool == 1){
+			a4.hascompleted = true; 
+		}	
+		if(numTravel == 1){
+			a6.hascompleted = true;		
+		}
+		if(coins >= 1)
+		{
+			a13.hascompleted = true; 
+		}
+		if(coins >= 25)
+		{
+			a14.hascompleted = true; 
+		}
+		if(coins >=100)
+		{
+			a15.hascompleted = true; 
+		}
+		if(numTotalTasks >= 8)
+		{
+			a17.hascompleted = true; 
+		}
+		if(numTotalTasks >= 64)
+		{
+			a18.hascompleted = true; 
+		}
+		if(numTotalTasks >= 128)
+		{
+			a19.hascompleted = true; 
+		}
+		if(numTotalTasks >= 512)
+		{
+			a20.hascompleted = true; 
+		}
+		
+		//To run through each item and check if it has been completed
+		//Would like to change the picture from gray star (tinted) to yellow star when completed
+		//As of now, just added "Completed!" text 
+		for(int i = 0; i < ach.size(); i++)
+		{
+			String c = "Completed!\n";
+//			ArrayList<View> listOfViews = new ArrayList<View>();
+//			listView1.reclaimViews(listOfViews);
+//			for (View v : listOfViews)
+//			{
+//			    ImageView image = (ImageView)v.findViewById(R.id.achievementimage);
+//			    image.setImageResource(R.drawable.calendar); 
+//	
+//			}
+			if(ach.get(i).hascompleted == true)
+			{
+			  //  View imageView =(ImageView)findViewById(R.id.achievementimage);
+				//imageView.setI(R.drawable.star);//R.drawable.star);
+				 
+		      //  ((ImageView) imageView).setImageResource(R.drawable.star);
+				ach.get(i).description = c + ach.get(i).description; 				
+				//ImageView iv = (ImageView) findViewById(R.id.achievementimage);
+				//iv.setImageResource(R.drawable.star);
+			}
+		}
 	}
 
 	

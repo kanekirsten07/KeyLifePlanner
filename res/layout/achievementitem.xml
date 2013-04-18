@@ -9,7 +9,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="6dip"
-        android:src="@drawable/star"/>
+        android:tint = "#808080"
+        android:src="@drawable/star"
+        />
     
         
      <TextView 
