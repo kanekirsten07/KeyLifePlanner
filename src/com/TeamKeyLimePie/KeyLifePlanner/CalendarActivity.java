@@ -118,6 +118,10 @@ public class CalendarActivity extends Activity implements OnClickListener{
 
 
 		task_listview = (ListView) findViewById(R.id.task_list);
+		//Task t1 = new Task("hi", "6", "school", 0);
+		//Sunday.add(t1);
+
+
 
 		task_listview.setOnItemClickListener(new ListView.OnItemClickListener() {
 
@@ -147,7 +151,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 						}
 					};
 					AlertDialog.Builder builder = new AlertDialog.Builder(myContext);
-					builder.setMessage("Have You Completed This activity?").setPositiveButton("Yes", yesnobox).setNegativeButton("No", yesnobox).show();
+					builder.setMessage("Have you Completed This activity?").setPositiveButton("Yes", yesnobox).setNegativeButton("No", yesnobox).show();
 					// Remembers the selected Index
 					if(activelist.equalsIgnoreCase("Sunday"))
 					{
@@ -279,7 +283,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 				//					taskimage.setImageResource(R.drawable.othericon);
 				//				}
 				else{
-					taskimage.setImageResource(R.drawable.calendar); 
+					taskimage.setImageResource(R.drawable.iconother); 
 				}
 
 
@@ -290,7 +294,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 
 				if(timedue != null)
 				{
-					timedue.setText(t.timedue);
+					timedue.setText("DO BY: "+t.timedue);
 				}
 
 
@@ -415,3 +419,4 @@ public class CalendarActivity extends Activity implements OnClickListener{
 
 
 }
+

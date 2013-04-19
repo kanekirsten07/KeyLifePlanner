@@ -37,15 +37,14 @@ public class AddTaskActivity extends Activity implements OnClickListener{
 	private Spinner typeoftask;
 	Random randomvalue = new Random();
 	MediaPlayer backgroundCalendar;
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_task);
 		
 		backgroundCalendar = MediaPlayer.create(AddTaskActivity.this, R.raw.neogardens);
-		backgroundCalendar.setLooping(true);
-		backgroundCalendar.start();
+		    backgroundCalendar.setLooping(true);
+		    backgroundCalendar.start();
 		
 		Sunday = ((GlobalApp)getApplication()).getSunday();
 		Monday = ((GlobalApp)getApplication()).getMonday();
@@ -128,20 +127,19 @@ public class AddTaskActivity extends Activity implements OnClickListener{
 		}
 		
 	}
+	@Override
+	  protected void onPause()
+	  {
+	    super.onPause();
+	    backgroundCalendar.pause();
+	  }
 	
-	@Override
-	protected void onPause()
-	{
-		super.onPause();
-		backgroundCalendar.pause();
-	}
-
-	@Override
-	protected void onResume()
-	{
-		super.onResume();
-		backgroundCalendar.start();
-	}
+	  @Override
+	  protected void onResume()
+	  {
+	    super.onResume();
+	    backgroundCalendar.start();
+	  }
 
 	
 

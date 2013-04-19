@@ -9,6 +9,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -29,6 +30,11 @@ public class AchievementActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_achievement);
+		
+		TextView title = (TextView)findViewById(R.id.achievementheading);	
+		Typeface tf1 = Typeface.createFromAsset(getAssets(),
+		        "fonts/governor.ttf");
+		title.setTypeface(tf1);
 		
 		backgroundAchievement = MediaPlayer.create(AchievementActivity.this, R.raw.sailingintoabyss);
 		backgroundAchievement.setLooping(true);
@@ -69,10 +75,10 @@ public class AchievementActivity extends Activity {
 		Achievement a20 = new Achievement("Task Sage!"+ "\n"+"You Have Completed 512 Tasks", false);
 
 		for(int i = 0; i < ach.size(); i++)
-		{
-			if(ach.get(i).hascompleted ==true)
-			Toast.makeText(getApplicationContext(), "You've earned a new achievement!", Toast.LENGTH_LONG).show();
-		}
+			    {
+			      if(ach.get(i).hascompleted ==true)
+			      Toast.makeText(getApplicationContext(), "You've earned a new achievement!", Toast.LENGTH_LONG).show();
+			    }
 		
 	
 		
@@ -100,16 +106,15 @@ public class AchievementActivity extends Activity {
 		
 		achieve_view = (ListView)findViewById(R.id.achievementlist);
 		achieve_view.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, ach));
-	
+		
 		//Case by case if statements 
 		if(a1.hascompleted = false)
-		{
-			a1.hascompleted = true;
-		//	Toast.makeText(getApplicationContext(), "You've earned a new achievement!", Toast.LENGTH_LONG).show();
-		}
+			    {
+			      a1.hascompleted = true;
+			    //  Toast.makeText(getApplicationContext(), "You've earned a new achievement!", Toast.LENGTH_LONG).show();
+			    }
 		if(numHygiene == 1){
 			a2.hascompleted = true; 
-			
 		}
 		if(numWork == 1){
 			a3.hascompleted = true; 
@@ -149,15 +154,12 @@ public class AchievementActivity extends Activity {
 			a20.hascompleted = true; 
 		}
 		
-
 		for(int i = 0; i < ach.size(); i++)
 		{
 			String c = "Completed!\n";
-
 			if(ach.get(i).hascompleted == true)
 			{
-				ach.get(i).description = c + ach.get(i).description; 				
-
+				ach.get(i).description = c + ach.get(i).description;
 			}
 		}
 	}
@@ -194,16 +196,15 @@ public class AchievementActivity extends Activity {
 					description.setText(a1.description);
 				}
 				
-
 				if(a1.hascompleted == true){
-					ImageView image = (ImageView)v.findViewById(R.id.achievementimage);
-						image.setImageResource(R.drawable.star); 
-				}
-				else{
-					ImageView image = (ImageView)v.findViewById(R.id.achievementimage);
-					image.setImageResource(R.drawable.graystar); 
-
-				}
+					          ImageView image = (ImageView)v.findViewById(R.id.achievementimage);
+					            image.setImageResource(R.drawable.star); 
+					        }
+					        else{
+					          ImageView image = (ImageView)v.findViewById(R.id.achievementimage);
+					          image.setImageResource(R.drawable.graystar); 
+					
+					        }
 			
 			
 		}

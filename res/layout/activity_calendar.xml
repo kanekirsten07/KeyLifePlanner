@@ -85,6 +85,8 @@
     
     <ListView 
         android:id="@+id/task_list"
+        android:divider="@null"
+		android:dividerHeight="0dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
 
