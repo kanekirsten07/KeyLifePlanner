@@ -18,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AchievementActivity extends Activity {
 
@@ -46,7 +47,7 @@ public class AchievementActivity extends Activity {
 		
 	
 		
-		Achievement a1 = new Achievement("First Day!" + "\n"+ " Welcome to Key Life Planner!", true);
+		Achievement a1 = new Achievement("First Day!" + "\n"+ " Welcome to Key Life Planner!", false);
 		Achievement a2 = new Achievement("Clean!" + "\n"+" You Have Completed a Hygiene Tasks", false);
 		Achievement a3 = new Achievement("Hard Working!" + "\n"+" You have completed a Work task", false);
 		Achievement a4 = new Achievement("Good Student!" + "\n"+" You have compeleted a School task", false);
@@ -67,6 +68,11 @@ public class AchievementActivity extends Activity {
 		Achievement a19 = new Achievement("Task Master!"+ "\n"+"You Have Completed 128 Tasks", false);
 		Achievement a20 = new Achievement("Task Sage!"+ "\n"+"You Have Completed 512 Tasks", false);
 
+		for(int i = 0; i < ach.size(); i++)
+		{
+			if(ach.get(i).hascompleted ==true)
+			Toast.makeText(getApplicationContext(), "You've earned a new achievement!", Toast.LENGTH_LONG).show();
+		}
 		
 	
 		
@@ -96,8 +102,14 @@ public class AchievementActivity extends Activity {
 		achieve_view.setAdapter(new UserItemAdapter(this, android.R.layout.simple_list_item_1, ach));
 	
 		//Case by case if statements 
+		if(a1.hascompleted = false)
+		{
+			a1.hascompleted = true;
+		//	Toast.makeText(getApplicationContext(), "You've earned a new achievement!", Toast.LENGTH_LONG).show();
+		}
 		if(numHygiene == 1){
 			a2.hascompleted = true; 
+			
 		}
 		if(numWork == 1){
 			a3.hascompleted = true; 
@@ -137,29 +149,15 @@ public class AchievementActivity extends Activity {
 			a20.hascompleted = true; 
 		}
 		
-		//To run through each item and check if it has been completed
-		//Would like to change the picture from gray star (tinted) to yellow star when completed
-		//As of now, just added "Completed!" text 
+
 		for(int i = 0; i < ach.size(); i++)
 		{
 			String c = "Completed!\n";
-//			ArrayList<View> listOfViews = new ArrayList<View>();
-//			listView1.reclaimViews(listOfViews);
-//			for (View v : listOfViews)
-//			{
-//			    ImageView image = (ImageView)v.findViewById(R.id.achievementimage);
-//			    image.setImageResource(R.drawable.calendar); 
-//	
-//			}
+
 			if(ach.get(i).hascompleted == true)
 			{
-			  //  View imageView =(ImageView)findViewById(R.id.achievementimage);
-				//imageView.setI(R.drawable.star);//R.drawable.star);
-				 
-		      //  ((ImageView) imageView).setImageResource(R.drawable.star);
 				ach.get(i).description = c + ach.get(i).description; 				
-				//ImageView iv = (ImageView) findViewById(R.id.achievementimage);
-				//iv.setImageResource(R.drawable.star);
+
 			}
 		}
 	}
@@ -196,7 +194,16 @@ public class AchievementActivity extends Activity {
 					description.setText(a1.description);
 				}
 				
-				
+
+				if(a1.hascompleted == true){
+					ImageView image = (ImageView)v.findViewById(R.id.achievementimage);
+						image.setImageResource(R.drawable.star); 
+				}
+				else{
+					ImageView image = (ImageView)v.findViewById(R.id.achievementimage);
+					image.setImageResource(R.drawable.graystar); 
+
+				}
 			
 			
 		}
