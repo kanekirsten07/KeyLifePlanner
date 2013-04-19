@@ -273,14 +273,14 @@ public class CalendarActivity extends Activity implements OnClickListener{
 					taskimage.setImageResource(R.drawable.workicon); 
 				}
 				else if(t.typeoftask.equalsIgnoreCase("Hygiene")){
-					taskimage.setImageResource(R.drawable.hygiene); 
+					taskimage.setImageResource(R.drawable.iconhygiene); 
 				}
 				//No graphic for "Travel" Tasks 
 				//				else if (t.typeoftask.equalsIgnoreCase("Travel")){
 				//					taskimage.setImageResource(R.drawable.othericon);
 				//				}
 				else{
-					taskimage.setImageResource(R.drawable.calendar); 
+					taskimage.setImageResource(R.drawable.othericon); 
 				}
 
 
