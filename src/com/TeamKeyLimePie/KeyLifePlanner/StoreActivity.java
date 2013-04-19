@@ -25,6 +25,8 @@ public class StoreActivity extends Activity implements OnClickListener{
 		backgroundShop = MediaPlayer.create(StoreActivity.this, R.raw.shop);
 		backgroundShop.setLooping(true);
 		backgroundShop.start();
+		
+		bank = ((GlobalApp)getApplication()).getmoney();
 
 		GridView gridview = (GridView) findViewById(R.id.gridview);
 		gridview.setAdapter(new ImageAdapter(this));

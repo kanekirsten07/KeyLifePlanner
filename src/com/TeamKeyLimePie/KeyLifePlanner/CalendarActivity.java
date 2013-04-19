@@ -314,7 +314,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 	protected void onPause()
 	{
 		super.onPause();
-		backgroundCalendar.stop();
+		backgroundCalendar.pause();
 	}
 
 	@Override
