@@ -16,7 +16,6 @@ import android.widget.AdapterView.OnItemClickListener;
 public class StoreActivity extends Activity implements OnClickListener{
 	MediaPlayer backgroundShop;
 	public int bank;
-	private ArrayList<Item> i;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +29,32 @@ public class StoreActivity extends Activity implements OnClickListener{
 		GridView gridview = (GridView) findViewById(R.id.gridview);
 		gridview.setAdapter(new ImageAdapter(this));
 
+		
+		
 		gridview.setOnItemClickListener(new OnItemClickListener() 
 		{
 			public void onItemClick(AdapterView<?> parent, View v, int position, long id) 
 			{
-				ArrayList<Item> i = ((GlobalApp)getApplication()).getItem();
+				ArrayList<Item> i = new ArrayList<Item>();
+				Item i1 = new Item(100, false);
+				Item i2 = new Item(250, false);
+				Item i3 = new Item(150, false);
+				Item i4 = new Item(200, false);
+				Item i5 = new Item(200, false);
+				Item i6 = new Item(175, false);
+				Item i7 = new Item(150, false);
+				Item i8 = new Item(300, false);
+				Item i9 = new Item(250, false);
+				i.add(i1);
+				i.add(i2);
+				i.add(i3);
+				i.add(i4);
+				i.add(i5);
+				i.add(i6);
+				i.add(i7);
+				i.add(i8);
+				i.add(i9);
+				
 				bank = ((GlobalApp)getApplication()).getmoney();
 				
 				//checks if the item is already bought
@@ -55,11 +75,26 @@ public class StoreActivity extends Activity implements OnClickListener{
 				}
 			}
 		});
+		
+		
+		
 
 		TextView wallet = (TextView)findViewById(R.id.wallet);
 		wallet.setText("Amount of Coins: " + bank);
 	}
+	@Override
+	protected void onPause()
+	{
+		super.onPause();
+		backgroundShop.stop();
+	}
 
+	@Override
+	protected void onResume()
+	{
+		super.onResume();
+		backgroundShop.start();
+	}
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub

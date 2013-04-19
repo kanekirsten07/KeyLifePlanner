@@ -44,6 +44,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 
 	EditText taskedit;
 	MediaPlayer backgroundCalendar;
+	MediaPlayer success;
 	public ArrayList<Task> Sunday ;
 	public ArrayList<Task> Monday ;
 	public ArrayList<Task> Tuesday ;
@@ -135,6 +136,8 @@ public class CalendarActivity extends Activity implements OnClickListener{
 						public void onClick(DialogInterface dialog, int which) {
 							switch(which){
 							case DialogInterface.BUTTON_POSITIVE:
+								success = MediaPlayer.create(CalendarActivity.this, R.raw.success);
+								success.start();
 								((GlobalApp)getApplication()).incmoney(reward);
 								activearraylist.remove(position);
 								

@@ -130,24 +130,26 @@ public final class R {
         public static final int FridayLabel=0x7f06000f;
         public static final int MondayLabel=0x7f06000b;
         public static final int SaturdayLabel=0x7f060010;
+        public static final int StoreLabel=0x7f06001c;
         public static final int SubmitButtonLabel=0x7f060008;
         public static final int SundayLabel=0x7f06000a;
         public static final int ThursdayLabel=0x7f06000e;
         public static final int TuesdayLabel=0x7f06000c;
         public static final int WednesdayLabel=0x7f06000d;
         public static final int action_settings=0x7f060001;
-        public static final int addtasklabel=0x7f060013;
+        public static final int addtasklabel=0x7f060014;
         public static final int app_name=0x7f060000;
         public static final int calendar=0x7f060005;
-        public static final int categorylabel=0x7f060015;
-        public static final int duebylabel=0x7f060016;
-        public static final int hello_world=0x7f060019;
-        public static final int namelabel=0x7f060014;
-        public static final int title_activity_achievement=0x7f06001a;
-        public static final int title_activity_add_task=0x7f060018;
-        public static final int title_activity_avatar=0x7f060017;
+        public static final int categorylabel=0x7f060016;
+        public static final int duebylabel=0x7f060017;
+        public static final int hello_world=0x7f06001a;
+        public static final int namelabel=0x7f060015;
+        public static final int title_activity_achievement=0x7f06001b;
+        public static final int title_activity_add_task=0x7f060019;
+        public static final int title_activity_avatar=0x7f060018;
         public static final int title_activity_calendar=0x7f060003;
         public static final int title_activity_calendar_view=0x7f060004;
+        public static final int title_store=0x7f060013;
         public static final int welcome=0x7f060002;
     }
     public static final class style {

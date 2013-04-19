@@ -20,6 +20,7 @@
     <string name="SaturdayLabel">SAT</string>
     <string name="AchievementsButtonLabel">ACHIEVEMENTS</string>
     <string name="Avatar"> This is the avatar view</string>
+    <string name ="title_store">Store</string>
     
     <string name="addtasklabel">Add Task</string>
     <string name="namelabel">TASK NAME : </string>
@@ -96,5 +97,6 @@
     <string name="title_activity_add_task">AddTaskActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_achievement">AchievementActivity</string>
+    <string name="StoreLabel">Store</string>
 
 </resources>
