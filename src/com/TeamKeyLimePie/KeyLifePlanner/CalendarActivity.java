@@ -118,10 +118,6 @@ public class CalendarActivity extends Activity implements OnClickListener{
 
 
 		task_listview = (ListView) findViewById(R.id.task_list);
-		//Task t1 = new Task("hi", "6", "school", 0);
-		//Sunday.add(t1);
-
-
 
 		task_listview.setOnItemClickListener(new ListView.OnItemClickListener() {
 
@@ -142,7 +138,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 								activearraylist.remove(position);
 								
 								u.notifyDataSetChanged();
-								Toast.makeText(getApplicationContext(), "You've earned " + reward + "coins!", Toast.LENGTH_LONG).show();
+								Toast.makeText(getApplicationContext(), "You've earned " + reward + " coins!", Toast.LENGTH_LONG).show();
 								break;
 							case DialogInterface.BUTTON_NEGATIVE:
 								break;
@@ -151,7 +147,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 						}
 					};
 					AlertDialog.Builder builder = new AlertDialog.Builder(myContext);
-					builder.setMessage("Have you Completed This activity?").setPositiveButton("Yes", yesnobox).setNegativeButton("No", yesnobox).show();
+					builder.setMessage("Have You Completed This activity?").setPositiveButton("Yes", yesnobox).setNegativeButton("No", yesnobox).show();
 					// Remembers the selected Index
 					if(activelist.equalsIgnoreCase("Sunday"))
 					{
