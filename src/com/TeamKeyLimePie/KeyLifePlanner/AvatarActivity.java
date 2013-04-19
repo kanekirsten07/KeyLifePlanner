@@ -98,9 +98,14 @@ public class AvatarActivity extends Activity implements OnClickListener{
 				}			
 			}
 		});
-
+		ImageView img = (ImageView)findViewById(R.id.coin);
+		img.setImageResource(R.drawable.coin);
+		img.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 		TextView wallet = (TextView)findViewById(R.id.wallet);
-		wallet.setText("Amount of Coins: " + bank);
+		wallet.setText("  COINS: " + bank);
+		Typeface tf2 = Typeface.createFromAsset(getAssets(),
+				"fonts/Lorenabold.ttf");
+		wallet.setTypeface(tf2);
 	}
 
 	@Override

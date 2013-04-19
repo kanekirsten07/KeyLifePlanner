@@ -36,70 +36,73 @@ public final class R {
     public static final class drawable {
         public static final int activeday=0x7f020000;
         public static final int addtaskbutton=0x7f020001;
-        public static final int bluebunny=0x7f020002;
-        public static final int bluebunnyhat=0x7f020003;
-        public static final int bluebutton=0x7f020004;
-        public static final int calendar=0x7f020005;
-        public static final int calendarmain=0x7f020006;
-        public static final int graystar=0x7f020007;
-        public static final int greenbutton=0x7f020008;
-        public static final int homework=0x7f020009;
-        public static final int hygiene=0x7f02000a;
-        public static final int ic_launcher=0x7f02000b;
-        public static final int iconhygiene=0x7f02000c;
-        public static final int iconother=0x7f02000d;
-        public static final int inactiveday=0x7f02000e;
-        public static final int keylifeplanner=0x7f02000f;
-        public static final int othericon=0x7f020010;
-        public static final int sample_0=0x7f020011;
-        public static final int sample_1=0x7f020012;
-        public static final int sample_2=0x7f020013;
-        public static final int sample_3=0x7f020014;
-        public static final int sample_4=0x7f020015;
-        public static final int star=0x7f020016;
-        public static final int tasklistview=0x7f020017;
-        public static final int workicon=0x7f020018;
-        public static final int yellowbutton=0x7f020019;
+        public static final int appicon=0x7f020002;
+        public static final int bluebunny=0x7f020003;
+        public static final int bluebunnyhat=0x7f020004;
+        public static final int bluebutton=0x7f020005;
+        public static final int calendar=0x7f020006;
+        public static final int calendarmain=0x7f020007;
+        public static final int coin=0x7f020008;
+        public static final int graystar=0x7f020009;
+        public static final int greenbutton=0x7f02000a;
+        public static final int homework=0x7f02000b;
+        public static final int hygiene=0x7f02000c;
+        public static final int ic_launcher=0x7f02000d;
+        public static final int iconhygiene=0x7f02000e;
+        public static final int iconother=0x7f02000f;
+        public static final int inactiveday=0x7f020010;
+        public static final int keylifeplanner=0x7f020011;
+        public static final int othericon=0x7f020012;
+        public static final int sample_0=0x7f020013;
+        public static final int sample_1=0x7f020014;
+        public static final int sample_2=0x7f020015;
+        public static final int sample_3=0x7f020016;
+        public static final int sample_4=0x7f020017;
+        public static final int star=0x7f020018;
+        public static final int tasklistview=0x7f020019;
+        public static final int workicon=0x7f02001a;
+        public static final int yellowbutton=0x7f02001b;
     }
     public static final class id {
         public static final int achievedescription=0x7f0b0001;
         public static final int achievementheading=0x7f0b0002;
         public static final int achievementimage=0x7f0b0000;
         public static final int achievementlist=0x7f0b0004;
-        public static final int action_settings=0x7f0b0025;
-        public static final int addtask=0x7f0b001a;
+        public static final int action_settings=0x7f0b0026;
+        public static final int addtask=0x7f0b001b;
         public static final int addtask_title=0x7f0b0005;
         public static final int avatar=0x7f0b000f;
         public static final int avatar_banner=0x7f0b000e;
-        public static final int bunnyblue=0x7f0b0020;
-        public static final int calendarActivity=0x7f0b001d;
+        public static final int bunnyblue=0x7f0b0021;
+        public static final int calendarActivity=0x7f0b001e;
         public static final int category_label=0x7f0b0008;
+        public static final int coin=0x7f0b0010;
         public static final int day=0x7f0b000b;
-        public static final int description=0x7f0b0023;
+        public static final int description=0x7f0b0024;
         public static final int dueby_label=0x7f0b000a;
-        public static final int friday=0x7f0b0018;
-        public static final int gridview=0x7f0b0012;
+        public static final int friday=0x7f0b0019;
+        public static final int gridview=0x7f0b0013;
         public static final int imageView1=0x7f0b0003;
-        public static final int keylifeplanner=0x7f0b001c;
-        public static final int monday=0x7f0b0014;
+        public static final int keylifeplanner=0x7f0b001d;
+        public static final int monday=0x7f0b0015;
         public static final int namelabel=0x7f0b0006;
-        public static final int saturday=0x7f0b0019;
-        public static final int store=0x7f0b0011;
-        public static final int store_banner=0x7f0b0021;
+        public static final int saturday=0x7f0b001a;
+        public static final int store=0x7f0b0012;
+        public static final int store_banner=0x7f0b0022;
         public static final int submit=0x7f0b000d;
-        public static final int sunday=0x7f0b0013;
-        public static final int task_list=0x7f0b001b;
+        public static final int sunday=0x7f0b0014;
+        public static final int task_list=0x7f0b001c;
         public static final int task_spinner=0x7f0b0009;
-        public static final int taskimage=0x7f0b0022;
+        public static final int taskimage=0x7f0b0023;
         public static final int taskname=0x7f0b0007;
-        public static final int thursday=0x7f0b0017;
+        public static final int thursday=0x7f0b0018;
         public static final int time_due=0x7f0b000c;
-        public static final int timedue=0x7f0b0024;
-        public static final int tuesday=0x7f0b0015;
-        public static final int viewAchievements=0x7f0b001e;
-        public static final int viewAvatar=0x7f0b001f;
-        public static final int wallet=0x7f0b0010;
-        public static final int wednesday=0x7f0b0016;
+        public static final int timedue=0x7f0b0025;
+        public static final int tuesday=0x7f0b0016;
+        public static final int viewAchievements=0x7f0b001f;
+        public static final int viewAvatar=0x7f0b0020;
+        public static final int wallet=0x7f0b0011;
+        public static final int wednesday=0x7f0b0017;
     }
     public static final class layout {
         public static final int achievementitem=0x7f030000;
@@ -159,11 +162,13 @@ public final class R {
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
         
 
         Base application theme for API 11+. This theme completely replaces
@@ -180,7 +185,8 @@ public final class R {
         public static final int AppBaseTheme=0x7f090001;
         /**  Application theme. 
          */
-        public static final int AppTheme=0x7f090002;
+        public static final int AppTheme=0x7f090003;
         public static final int ButtonText=0x7f090000;
+        public static final int Widget_Spinner=0x7f090002;
     }
 }

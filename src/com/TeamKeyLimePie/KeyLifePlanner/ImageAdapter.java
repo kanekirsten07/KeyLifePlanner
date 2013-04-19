@@ -1,6 +1,7 @@
 package com.TeamKeyLimePie.KeyLifePlanner;
 import com.TeamKeyLimePie.KeyLifePlanner.R;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
+    int white = Color.WHITE;
 
     public ImageAdapter(Context c) {
         mContext = c;
@@ -34,6 +36,7 @@ public class ImageAdapter extends BaseAdapter {
             imageView.setLayoutParams(new GridView.LayoutParams(200, 200));
             imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
             imageView.setPadding(2, 2, 2, 2);
+            imageView.setBackgroundColor(white);
         } else {
             imageView = (ImageView) convertView;
         }

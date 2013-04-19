@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
@@ -78,9 +79,14 @@ public class StoreActivity extends Activity implements OnClickListener {
 				}
 			}
 		});
-
+		ImageView img = (ImageView)findViewById(R.id.coin);
+		img.setImageResource(R.drawable.coin);
+		img.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+		
 		TextView wallet = (TextView) findViewById(R.id.wallet);
-		wallet.setText("Amount of Coins: " + bank);
+		wallet.setText("  COINS: " + bank);
+		Typeface tf2 = Typeface.createFromAsset(getAssets(), "fonts/Lorenabold.ttf");
+		wallet.setTypeface(tf2);
 	}
 
 	@Override

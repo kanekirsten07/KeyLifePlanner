@@ -37,7 +37,7 @@
          android:id="@+id/timedue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="left"
             android:focusable="false"
             android:textColor="#000000"
             android:textIsSelectable="true"

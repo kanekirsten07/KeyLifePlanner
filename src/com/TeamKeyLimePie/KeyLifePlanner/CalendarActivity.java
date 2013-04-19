@@ -285,6 +285,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 				else{
 					taskimage.setImageResource(R.drawable.iconother); 
 				}
+				taskimage.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 
 
 
