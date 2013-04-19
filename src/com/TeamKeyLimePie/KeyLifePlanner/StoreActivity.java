@@ -47,6 +47,10 @@ public class StoreActivity extends Activity implements OnClickListener{
 				Item i7 = new Item(150, false);
 				Item i8 = new Item(300, false);
 				Item i9 = new Item(250, false);
+<<<<<<< HEAD
+=======
+				Item i10 = new Item(150, false);
+>>>>>>> fixed another bug in avatar store :P
 				i.add(i1);
 				i.add(i2);
 				i.add(i3);
@@ -56,6 +60,10 @@ public class StoreActivity extends Activity implements OnClickListener{
 				i.add(i7);
 				i.add(i8);
 				i.add(i9);
+<<<<<<< HEAD
+=======
+				i.add(i10);
+>>>>>>> fixed another bug in avatar store :P
 				
 				bank = ((GlobalApp)getApplication()).getmoney();
 				
