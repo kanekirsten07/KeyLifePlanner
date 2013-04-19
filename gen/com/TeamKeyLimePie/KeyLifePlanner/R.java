@@ -49,19 +49,18 @@ public final class R {
         public static final int iconother=0x7f02000c;
         public static final int inactiveday=0x7f02000d;
         public static final int keylifeplanner=0x7f02000e;
-        public static final int othericon=0x7f02000f;
-        public static final int sample_0=0x7f020010;
-        public static final int sample_1=0x7f020011;
-        public static final int sample_2=0x7f020012;
-        public static final int sample_3=0x7f020013;
-        public static final int sample_4=0x7f020014;
-        public static final int sample_5=0x7f020015;
-        public static final int sample_6=0x7f020016;
-        public static final int sample_7=0x7f020017;
-        public static final int star=0x7f020018;
-        public static final int tasklistview=0x7f020019;
-        public static final int workicon=0x7f02001a;
-        public static final int yellowbutton=0x7f02001b;
+        public static final int sample_0=0x7f02000f;
+        public static final int sample_1=0x7f020010;
+        public static final int sample_2=0x7f020011;
+        public static final int sample_3=0x7f020012;
+        public static final int sample_4=0x7f020013;
+        public static final int sample_5=0x7f020014;
+        public static final int sample_6=0x7f020015;
+        public static final int sample_7=0x7f020016;
+        public static final int star=0x7f020017;
+        public static final int tasklistview=0x7f020018;
+        public static final int workicon=0x7f020019;
+        public static final int yellowbutton=0x7f02001a;
     }
     public static final class id {
         public static final int achievedescription=0x7f0b0001;

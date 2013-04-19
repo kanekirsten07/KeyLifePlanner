@@ -280,7 +280,7 @@ public class CalendarActivity extends Activity implements OnClickListener{
 				//					taskimage.setImageResource(R.drawable.othericon);
 				//				}
 				else{
-					taskimage.setImageResource(R.drawable.othericon); 
+					taskimage.setImageResource(R.drawable.iconother); 
 				}
 
 
