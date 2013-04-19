@@ -8,6 +8,7 @@ import java.util.Random;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -113,7 +114,9 @@ public class AddTaskActivity extends Activity implements OnClickListener{
     			((GlobalApp)getApplication()).setSaturday(Saturday);
     		}
 
-    		Toast.makeText(getApplicationContext(), "Task Added to " + day, Toast.LENGTH_LONG).show();
+    		Toast toast = Toast.makeText(getApplicationContext(), "Task Added to " + day, Toast.LENGTH_LONG);
+    		toast.setGravity(Gravity.TOP|Gravity.CENTER, 0, 350);
+    		toast.show();
     		break;
 		}
 		

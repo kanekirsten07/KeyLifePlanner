@@ -17,7 +17,7 @@ public class AvatarActivity extends Activity implements OnClickListener{
 
 	MediaPlayer backgroundShop;
 	public int bank;
-	
+	private ArrayList<Item> i;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,56 +32,12 @@ public class AvatarActivity extends Activity implements OnClickListener{
 
 		GridView gridview = (GridView) findViewById(R.id.gridview);
 		gridview.setAdapter(new ImageAdapter(this));
-		
-		Button viewStore = (Button)findViewById(R.id.store);
-		viewStore.setOnClickListener(this);
-		
-		ArrayList<Item> i = new ArrayList<Item>();
-		Item i1 = new Item(100, false);
-		Item i2 = new Item(250, false);
-		Item i3 = new Item(150, false);
-		Item i4 = new Item(200, true);
-		Item i5 = new Item(200, false);
-		Item i6 = new Item(175, true);
-		Item i7 = new Item(150, true);
-		Item i8 = new Item(300, false);
-		Item i9 = new Item(250, false);
-		i.add(i1);
-		i.add(i2);
-		i.add(i3);
-		i.add(i4);
-		i.add(i5);
-		i.add(i6);
-		i.add(i7);
-		i.add(i8);
-		i.add(i9);
 
 		gridview.setOnItemClickListener(new OnItemClickListener() 
 		{
 			public void onItemClick(AdapterView<?> parent, View v, int position, long id) 
 			{
-				ArrayList<Item> i = new ArrayList<Item>();
-				Item i1 = new Item(100, false);
-				Item i2 = new Item(250, false);
-				Item i3 = new Item(150, false);
-				Item i4 = new Item(200, false);
-				Item i5 = new Item(200, false);
-				Item i6 = new Item(175, false);
-				Item i7 = new Item(150, false);
-				Item i8 = new Item(300, false);
-				Item i9 = new Item(250, false);
-				Item i10 = new Item(150, false);
-				i.add(i1);
-				i.add(i2);
-				i.add(i3);
-				i.add(i4);
-				i.add(i5);
-				i.add(i6);
-				i.add(i7);
-				i.add(i8);
-				i.add(i9);
-				i.add(i10);
-//				ArrayList<Item> i = ((GlobalApp)getApplication()).getItem();
+				ArrayList<Item> i = ((GlobalApp)getApplication()).getItem();
 
 				//checks if the item as been bought yet
 				if(!(i.get(position).isBought()))
@@ -104,7 +60,7 @@ public class AvatarActivity extends Activity implements OnClickListener{
 	protected void onPause()
 	{
 		super.onPause();
-		backgroundShop.pause();
+		backgroundShop.stop();
 	}
 
 	@Override
@@ -126,7 +82,7 @@ public class AvatarActivity extends Activity implements OnClickListener{
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		Intent i;
-
+		Button b;
 		if (v.getId() == R.id.store)
 		{
 			Log.d("click", "Store was clicked");

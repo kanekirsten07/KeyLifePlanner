@@ -43,10 +43,6 @@
             android:name="com.TeamKeyLimePie.KeyLifePlanner.AchievementActivity"
             android:label="@string/title_activity_achievement" >
         </activity>
-        <activity
-            android:name="com.TeamKeyLimePie.KeyLifePlanner.StoreActivity"
-            android:label="@string/title_store" >
-        </activity>
     </application>
 
 </manifest>
