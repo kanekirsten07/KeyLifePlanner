@@ -143,6 +143,17 @@ public class CalendarActivity extends Activity implements OnClickListener{
 								
 								u.notifyDataSetChanged();
 								Toast.makeText(getApplicationContext(), "You've earned " + reward + " coins!", Toast.LENGTH_LONG).show();
+								
+								for(int i = 0; i <((GlobalApp)getApplication()).getAch().size(); i++ ){
+									if(((GlobalApp)getApplication()).getAch().get(i).hascompleted==true )
+									{
+										Toast.makeText(getApplicationContext(), "You've earned a new achievement!", Toast.LENGTH_LONG).show();
+										success = MediaPlayer.create(CalendarActivity.this, R.raw.success);
+										success.start();
+										((GlobalApp)getApplication()).setHasAchieved(false); 
+									}
+								}
+
 								break;
 							case DialogInterface.BUTTON_NEGATIVE:
 								break;

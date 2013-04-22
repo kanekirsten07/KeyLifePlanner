@@ -18,7 +18,15 @@ public class GlobalApp extends Application {
 	private ArrayList<Item> item = new ArrayList<Item>();
 	
 	
+	private boolean hasAchieved = true; 
+	ArrayList<Achievement> ach = new ArrayList<Achievement>();
 	
+	public void setAch(ArrayList<Achievement> a){this.ach = a; }
+	public void addAch(Achievement a){ach.add(a); }
+	public ArrayList<Achievement> getAch(){return this.ach;}
+	
+	public void setHasAchieved(boolean b){this.hasAchieved = b; }
+	public boolean getHasAchieved(){return hasAchieved;}
 	
 	
 	
