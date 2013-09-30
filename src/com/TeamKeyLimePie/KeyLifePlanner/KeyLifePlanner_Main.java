@@ -6,6 +6,8 @@ package com.TeamKeyLimePie.KeyLifePlanner;
 
 import java.util.ArrayList;
 
+import com.TeamKeyLimePie.KeyLifePlanner.R.id;
+
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
@@ -35,9 +37,11 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
 		Button viewCalendar = (Button)findViewById(R.id.calendarActivity);
 		Button viewAvatar = (Button)findViewById(R.id.viewAvatar);
 		Button viewAchievements = (Button)findViewById(R.id.viewAchievements);
+		Button viewLogin = (Button)findViewById(R.id.viewLogin);
 		
 		viewCalendar.setOnClickListener(this);
 		viewAchievements.setOnClickListener(this);
+		viewLogin.setOnClickListener(this);
 		
 		viewAvatar.setOnClickListener(this);
 		for(int i = 0; i <((GlobalApp)getApplication()).getAch().size(); i++ ){
@@ -95,6 +99,10 @@ public class KeyLifePlanner_Main extends Activity implements OnClickListener{
     		break;
     	case R.id.viewAchievements:
     		i = new Intent(this, AchievementActivity.class);
+    		startActivity(i);
+    		break;
+    	case R.id.viewLogin:
+    		i = new Intent(this, LoginActivity.class);
     		startActivity(i);
     		break;
     	

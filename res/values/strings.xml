@@ -95,5 +95,7 @@
     <string name="title_activity_add_task">AddTaskActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_achievement">AchievementActivity</string>
+    <string name="LoginLabel">LOGIN</string>
+    <string name="UsernameLabel">username: </string>
 
 </resources>

@@ -65,43 +65,48 @@ public final class R {
         public static final int yellowbutton=0x7f02001c;
     }
     public static final class id {
+        public static final int UsernameLabel=0x7f0b0024;
         public static final int achievedescription=0x7f0b0001;
         public static final int achievementheading=0x7f0b0002;
         public static final int achievementimage=0x7f0b0000;
         public static final int achievementlist=0x7f0b0004;
-        public static final int action_settings=0x7f0b0026;
+        public static final int action_settings=0x7f0b002b;
         public static final int addtask=0x7f0b001b;
         public static final int addtask_title=0x7f0b0005;
         public static final int avatar=0x7f0b000f;
         public static final int avatar_banner=0x7f0b000e;
-        public static final int bunnyblue=0x7f0b0021;
+        public static final int bunnyblue=0x7f0b0022;
         public static final int calendarActivity=0x7f0b001e;
         public static final int category_label=0x7f0b0008;
         public static final int coin=0x7f0b0010;
         public static final int day=0x7f0b000b;
-        public static final int description=0x7f0b0024;
+        public static final int description=0x7f0b0029;
         public static final int dueby_label=0x7f0b000a;
         public static final int friday=0x7f0b0019;
         public static final int gridview=0x7f0b0013;
         public static final int imageView1=0x7f0b0003;
         public static final int keylifeplanner=0x7f0b001d;
+        public static final int login_title=0x7f0b0023;
         public static final int monday=0x7f0b0015;
         public static final int namelabel=0x7f0b0006;
         public static final int saturday=0x7f0b001a;
         public static final int store=0x7f0b0012;
-        public static final int store_banner=0x7f0b0022;
+        public static final int store_banner=0x7f0b0027;
         public static final int submit=0x7f0b000d;
+        public static final int submitLogin=0x7f0b0026;
         public static final int sunday=0x7f0b0014;
         public static final int task_list=0x7f0b001c;
         public static final int task_spinner=0x7f0b0009;
-        public static final int taskimage=0x7f0b0023;
+        public static final int taskimage=0x7f0b0028;
         public static final int taskname=0x7f0b0007;
         public static final int thursday=0x7f0b0018;
         public static final int time_due=0x7f0b000c;
-        public static final int timedue=0x7f0b0025;
+        public static final int timedue=0x7f0b002a;
         public static final int tuesday=0x7f0b0016;
+        public static final int username=0x7f0b0025;
         public static final int viewAchievements=0x7f0b001f;
         public static final int viewAvatar=0x7f0b0020;
+        public static final int viewLogin=0x7f0b0021;
         public static final int wallet=0x7f0b0011;
         public static final int wednesday=0x7f0b0017;
     }
@@ -112,8 +117,9 @@ public final class R {
         public static final int activity_avatar=0x7f030003;
         public static final int activity_calendar=0x7f030004;
         public static final int activity_key_life_planner__main=0x7f030005;
-        public static final int activity_store=0x7f030006;
-        public static final int listitem=0x7f030007;
+        public static final int activity_login=0x7f030006;
+        public static final int activity_store=0x7f030007;
+        public static final int listitem=0x7f030008;
     }
     public static final class menu {
         public static final int achievement=0x7f0a0000;
@@ -136,12 +142,14 @@ public final class R {
         public static final int AvatarButtonLabel=0x7f060007;
         public static final int CalendarButtonLabel=0x7f060006;
         public static final int FridayLabel=0x7f06000f;
+        public static final int LoginLabel=0x7f06001b;
         public static final int MondayLabel=0x7f06000b;
         public static final int SaturdayLabel=0x7f060010;
         public static final int SubmitButtonLabel=0x7f060008;
         public static final int SundayLabel=0x7f06000a;
         public static final int ThursdayLabel=0x7f06000e;
         public static final int TuesdayLabel=0x7f06000c;
+        public static final int UsernameLabel=0x7f06001c;
         public static final int WednesdayLabel=0x7f06000d;
         public static final int action_settings=0x7f060001;
         public static final int addtasklabel=0x7f060013;

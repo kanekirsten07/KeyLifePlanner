@@ -17,6 +17,8 @@ public class GlobalApp extends Application {
 	private int money = 0;
 	private ArrayList<Item> item = new ArrayList<Item>();
 	
+	private String user = "";
+	
 	
 	private boolean hasAchieved = true; 
 	ArrayList<Achievement> ach = new ArrayList<Achievement>();
@@ -28,6 +30,15 @@ public class GlobalApp extends Application {
 	public void setHasAchieved(boolean b){this.hasAchieved = b; }
 	public boolean getHasAchieved(){return hasAchieved;}
 	
+	
+	public void setUser(String user)
+	{
+		this.user = user;
+	}
+	public String getUser()
+	{
+		return user;
+	}
 	
 	
 	public void setmoney(int num)
