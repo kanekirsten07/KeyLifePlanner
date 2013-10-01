@@ -164,6 +164,7 @@ public final class R {
         public static final int title_activity_avatar=0x7f060017;
         public static final int title_activity_calendar=0x7f060003;
         public static final int title_activity_calendar_view=0x7f060004;
+        public static final int title_activity_login=0x7f06001d;
         public static final int title_store=0x7f060012;
         public static final int welcome=0x7f060002;
     }

@@ -47,6 +47,10 @@
             android:name="com.TeamKeyLimePie.KeyLifePlanner.StoreActivity"
             android:label="@string/title_store" >
         </activity>
+        <activity
+            android:name="com.TeamKeyLimePie.KeyLifePlanner.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
     </application>
 
 </manifest>

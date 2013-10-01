@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -38,12 +39,11 @@ public class LoginActivity extends Activity implements OnClickListener {
 		loginLabel.setTypeface(tf1);
 		usernameLabel.setTypeface(tf2);
 		submit.setTypeface(tf2);
-		
 	}
 
 	@Override
 	public void onClick(View v) {
-		String user = username.getText().toString();
+		String user = username.getText().toString();  //idk... lolwut? null pointer exception
 
 		if(v.getId() == R.id.submitLogin)
 		{
