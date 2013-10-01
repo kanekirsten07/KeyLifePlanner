@@ -28,6 +28,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 		//interface components
 		TextView loginLabel = (TextView)findViewById(R.id.login_title);
 		TextView usernameLabel = (TextView)findViewById(R.id.UsernameLabel);
+		username = (EditText)findViewById(R.id.username);
 		Button submit = (Button)findViewById(R.id.submitLogin);
 		submit.setOnClickListener(this);
 
@@ -43,7 +44,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		String user = username.getText().toString();  //idk... lolwut? null pointer exception
+		String user = username.getText().toString();
 
 		if(v.getId() == R.id.submitLogin)
 		{
@@ -64,7 +65,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 
 				//toast to show successful login
 				Toast toast = Toast.makeText(getApplicationContext(), 
-						"Successful Login, press back to access menu", Toast.LENGTH_LONG);
+						"Login Successful!", Toast.LENGTH_LONG);
 				toast.setGravity(Gravity.BOTTOM|Gravity.CENTER, 0, 350);
 				toast.show();
 
@@ -72,7 +73,8 @@ public class LoginActivity extends Activity implements OnClickListener {
 				((GlobalApp)getApplication()).setUser(user);
 				
 				//assign all values associated with user into GlobalApp somewhere here?
-				
+				//KLP should know the username that is currently accessing it, but doesn't know info.
+				//need to access it from parse somehow here maybe?
 				
 				//exit current screen
 				finish();
@@ -93,6 +95,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 	
 	public boolean checkLogin(String user)
 	{
+		//return true;
 		return false;
 	}
 
